@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+<body>
+    <h1 class="head"><span>Hovhannes Matevosyan</span></h1>
+    <div class="wrapper">
+        <div class="wrap_form">
+            <form action="" id="test_stars">
+                <div class="rate_row">
+                    <span class="rate_star" data-id="1"></span>
+                    <span class="rate_star" data-id="2"></span>
+                    <span class="rate_star" data-id="3"></span>
+                    <span class="rate_star" data-id="4"></span>
+                    <span class="rate_star" data-id="5"></span>
+                    <input type="hidden" class="get_star" value="">
+                </div>
+
+                <div class="rate_row">
+                    <span class="rate_star" data-id="1"></span>
+                    <span class="rate_star" data-id="2"></span>
+                    <span class="rate_star" data-id="3"></span>
+                    <span class="rate_star" data-id="4"></span>
+                    <span class="rate_star" data-id="5"></span>
+                    <input type="hidden" class="get_star" value="">
+                </div>
+
+                <div class="rate_row">
+                    <span class="rate_star" data-id="1"></span>
+                    <span class="rate_star" data-id="2"></span>
+                    <span class="rate_star" data-id="3"></span>
+                    <span class="rate_star" data-id="4"></span>
+                    <span class="rate_star" data-id="5"></span>
+                    <input type="hidden" class="get_star" value="">
+                </div>
+
+                <div class="rate_row">
+                    <span class="rate_star" data-id="1"></span>
+                    <span class="rate_star" data-id="2"></span>
+                    <span class="rate_star" data-id="3"></span>
+                    <span class="rate_star" data-id="4"></span>
+                    <span class="rate_star" data-id="5"></span>
+                    <input type="hidden" class="get_star" value="">
+                </div>
+
+                <div class="rate_row">
+                    <span class="rate_star" data-id="1"></span>
+                    <span class="rate_star" data-id="2"></span>
+                    <span class="rate_star" data-id="3"></span>
+                    <span class="rate_star" data-id="4"></span>
+                    <span class="rate_star" data-id="5"></span>
+                    <input type="hidden" class="get_star" value="">
+                </div>
+
+                <div>
+                    <input type="submit" class="submit_stars" value="Submit">
+                </div>
+
+            </form>
+        </div><!--.wrap_form-->
+        <div class="wrap_desc">
+            <div class="desc">
+                <span> Change font size</span>
+                <input type="number" name="star_range" id="change_fonts" min="16" max="24" value="20"/>
+            </div>
+            <div class="desc">
+                <span> Change color</span>
+                <input type="color" name="star_color" id="change_color" />
+            </div>
+            <div class="desc">
+                <span> Change hover color</span>
+                <input type="color" name="star_color" id="change_hover_color"/>
+            </div>
+        </div>
+
+        <section class="features">
+            <h3>Features</h3>
+            <p>
+                StarWarsJS is a lightweight jQuery-plugin to set stars for feedback.
+                It is possible to have infinite number of rows and stars in it.
+                Also, one can set various range of rate numbers.
+            </p>
+            <div class="gif">
+                <img src="img/star-intro.gif" alt="Intro"/>
+            </div>
+
+            <h3>Browser support</h3>
+            <div class="section_content">
+                <ul class="browser_support_list">
+                    <li><span>Firefox</span></li>
+                    <li><span>Chrome</span></li>
+                    <li><span>Internet Explorer 9+</span></li>
+                    <li><span>Opera</span></li>
+                </ul>
+            </div>
+            <br/>
+            <p>
+                StarWarsJS is a jQuery-plugin to set stars for feedback. Star icons are based on fonts which
+                gives freedom to change the size and color of a certain icon by re-writing default CSS styles. Enjoy! :)
+            </p>
+            <div class="gif">
+                <img src="img/star-options.gif" alt="options"/>
+            </div>
+        </section>
+
+        <section class="installation">
+            <h3>Installation</h3>
+            <div class="section_content">
+                <ul class="installation_list">
+                    <li>Include the CSS at the top of your page in your <head> tag:</li>
+                    <li>
+                    <pre class="sw_code">
+                        <code>
+                            <span class="cnt_attr"><</span>link <span class="cnt_attr">href</span>=<span class="cnt_string">"path/to/starwars.css"</span> rel=<span class="cnt_string">"stylesheet"</span>>
+                        </code>
+                    </pre>
+                    </li>
+                    <li>Make sure to include jQuery in your page:</li>
+                    <li>
+                        <pre class="sw_code">
+                            <code>
+                                <span class="cnt_attr"><</span>script <span class="cnt_attr">src</span>=<span class="cnt_string">"https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"</span>><span><</span>/<span>script</span>>
+                            </code>
+                        </pre>
+                    </li>
+                    <li>Include the Javascript at the bottom of your page before the closing < /body> tag:</li>
+                    <li>
+                        <pre class="sw_code">
+                            <code>
+                                <span><</span>script <span class="cnt_attr">src</span>=<span class="cnt_string">"path/to/starwars.js"</span>><span>< /</span><span>script</span>>
+                            </code>
+                        </pre>
+                    </li>
+                    <li>Write your HTML:</li>
+                    <li>
+                        <pre class="sw_code">
+                            <code>
+                                <div>
+                                    <span><</span>div <span class="cnt_attr">class</span>=<span class="cnt_string">"rate_row"</span><span>> </span>
+
+                                    <span class="cnt_comments"><span><</span>!-- Wrap stars in a row --<span>> </span></span>
+                                    <div class="cnt_html">
+                                        <span><</span>span <span class="cnt_attr">class</span>=<span class="cnt_string">"rate_star"</span> <span class="cnt_attr">data-id</span>=<span class="cnt_string">"1"</span><span>></span><span><</span>/span></span>
+                                        <span class="cnt_comments"><span><</span>!-- Single Star --<span>> </span></span>
+                                    </div>
+                                    <div class="cnt_html">
+                                        <span><</span>span <span class="cnt_attr">class</span>=<span class="cnt_string">"rate_star"</span> <span class="cnt_attr">data-id</span>=<span class="cnt_string">"2"</span><span>></span><span><</span>/span></span>
+                                    </div>
+                                    <div class="cnt_html">
+                                        <span><</span>span <span class="cnt_attr">class</span>=<span class="cnt_string">"rate_star"</span> <span class="cnt_attr">data-id</span>=<span class="cnt_string">"3"</span><span>></span><span><</span>/span></span>
+                                    </div>
+                                    <div class="cnt_html">
+                                        <span><</span>span <span class="cnt_attr">class</span>=<span class="cnt_string">"rate_star"</span> <span class="cnt_attr">data-id</span>=<span class="cnt_string">"4"</span><span>></span><span><</span>/span></span>
+                                    </div>
+                                    <div class="cnt_html">
+                                        <span><</span>span <span class="cnt_attr">class</span>=<span class="cnt_string">"rate_star"</span> <span class="cnt_attr">data-id</span>=<span class="cnt_string">"5"</span><span>></span><span><</span>/span></span>
+                                    </div>
+                                    <div class="cnt_html">
+                                        <span><</span>input <span class="cnt_attr">type</span>="hidden" <span class="cnt_attr">class</span>=<span class="cnt_string">"get_star"</span> <span class="cnt_attr">value</span>=<span class="cnt_string">""</span><span>> </span>
+                                    </div>
+
+                                    <span><</span>/div> <br>
+                                </div>
+
+
+                            </code>
+                        </pre>
+                    </li>
+                    <li><p> Input element takes rate values from <span class="cnt_attr">data-id</span> attributes after
+                        a certain star was clicked.
+                        Therefore you should specify desired rate range there. The code written above will provide
+                        rate from 1 to 5, according to values written in data-id attributes.</p>
+                    </li>
+
+                </ul>
+            </div>
+        </section>
+    <section>
+        <h3>Initialize StarWarsJS.js</h3>
+        <p>
+            The class names of row and single star item should be included in selector in order to initialize the plugin.
+            <i>Note:</i> Do not forget to wrap code inside <span class="selected">$( document ).ready()</span>
+        </p>
+        <div>
+             <pre class="sw_code">
+                <code>$(<span class="cnt_string">' .rate_row .rate_star '</span>).starwarsjs();</code>
+             </pre>
+
+        </div>
+    </section>
+    </div>
+
+
+    <script src="js/jquery/jquery-2.1.3.min.js"></script>
+    <script src="js/starwarsjs.js"></script>
+    <script>
+
+        $( document ).ready(function() {
+            console.log('ready');
+            $('.rate_row .rate_star').starwarsjs();
+
+            $('#test_stars').on('submit', function(e){
+                e.preventDefault();
+                $(this).find('.rate_row > input.get_star').each(function(){
+                    var star_id = $(this).val();
+                            console.log(star_id);
+                });
+            });
+
+        });
+
+    </script>
+
+</body>
+</html>

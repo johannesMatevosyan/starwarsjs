@@ -1,0 +1,223 @@
+@import "../fonts/open-sans/stylesheet.css";
+@font-face {
+    font-family: 'starwarsjs';
+    src:  url('../fonts/starwarsjs.eot?szdw01');
+    src:  url('../fonts/starwarsjs.eot?szdw01#iefix') format('embedded-opentype'),
+    url('../fonts/starwarsjs.ttf?szdw01') format('truetype'),
+    url('../fonts/starwarsjs.woff?szdw01') format('woff'),
+    url('../fonts/starwarsjs.svg?szdw01#starwarsjs') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+.rate_star:before {
+    content: "\e902";
+    font-family: 'starwarsjs' !important;
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+*{
+    margin: 0;
+    padding: 0;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+ul{
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+body{
+    background: #1F577C;
+    color: #000000;
+    font-size: 14px;
+    font-family: 'open_sansregular';
+}
+.head{
+    background-color: #444;
+    color: #fff;
+    text-align: center;
+    font-size: 24px;
+}
+.head span{
+    color: #fff;
+    padding: 15px;
+    display: block;
+    text-decoration: none;
+}
+.wrapper{
+    background: #226792;
+    width: 740px;
+    margin: 0 auto 30px;
+    border-left: 1px solid;
+    border-right: 1px solid;
+    border-bottom: 1px solid;
+    padding: 40px 20px 20px 20px;
+}
+.wrap_form{
+    text-align: center;
+    height: 180px;
+}
+.wrap_desc{
+    text-align: center;
+    height: 50px;
+    margin-bottom: 30px;
+}
+.clear{
+    clear: both;
+}
+
+.desc{
+    display: inline-block;
+    vertical-align: middle;
+    margin: 5px 6px;
+    outline: none;
+}
+.desc input{
+    height: 23px;
+    display: inline-block;
+    vertical-align: middle;
+    margin: 5px 3px;
+    width: 60px;
+}
+.desc span{
+    display: inline-block;
+    font-size: 14px;
+    color: #000000;
+}
+section{
+    margin-bottom: 20px;
+}
+section h3{
+    color: #000000;
+    font-size: 16px;
+    font-family: 'open_sansregular';
+    text-transform: capitalize;
+    padding-bottom: 5px;
+    margin-bottom: 20px;
+}
+section p{
+    color: #000000;
+}
+ul.browser_support_list{
+    padding-left: 30px;
+}
+ul.browser_support_list li{
+    color: #000000;
+    list-style-type: disc;
+}
+.gif{
+    margin: 5px auto;
+    text-align: center;
+}
+
+pre.sw_code{
+    margin: 10px 0 20px 0;
+    background-color: whitesmoke;
+    border-radius: 4px;
+    padding: 8px 5px 8px 25px;
+    white-space: nowrap;
+}
+pre.sw_code code{
+    background-color: whitesmoke;
+    color: #000000;
+    border-radius: 4px;
+    font-size: 12px;
+    padding: 0;
+    position: relative;
+    white-space: nowrap;
+}
+pre.sw_code code span{
+    color: #333333;
+}
+pre.sw_code code .cnt_attr{
+    color: #07a;
+}
+pre.sw_code code .cnt_string{
+    color: #df5000;
+}
+pre.sw_code code .cnt_html{
+    margin:4px 0 0 22px;
+}
+pre.sw_code code .cnt_comments{
+    color: #228B22;
+}
+pre.sw_code code .cnt_ul{
+    margin:4px 0 0 40px;
+}
+pre.sw_code code .cnt_ul div{
+    margin-bottom: 5px;
+}
+pre.sw_code code .cnt_img{
+    margin-left: 20px;
+}
+pre.sw_code code .options_js{
+    color: #333333;
+    margin-top: 6px;
+}
+pre.sw_code code .options_js li{
+    display: block;
+    margin-bottom: 8px;
+}
+pre.sw_code code .options_js_keys{
+    display: inline-block;
+    margin-left: 22px;
+    color: #333333;
+    font-size: 12px;
+}
+pre.sw_code code .options_js_val{
+    display: inline-block;
+    color: #905;
+    font-size: 12px;
+}
+.selected{
+    font-family: 'open_sansregular';
+    font-weight: normal;
+    background: #f1f1f1;
+    color: #905;
+    padding: 0 3px;
+}
+
+
+/* plugin's styles*/
+.rate_row{
+    margin: 2px auto; /* custom */
+    text-align: left; /* custom */
+    width: 180px; /* custom */
+}
+.rate_star{
+    color: #cccccc;
+    cursor: pointer;
+    font-size: 20px;
+    padding-right: 8px; /* custom */
+}
+.rate_star.over{
+    color: #f9e431;
+}
+.rate_star.checked{
+    color: #F9D932;
+}
+
+.submit_stars{
+    padding: 3px 14px;
+    background: #801513;
+    border: 1px solid #801513;
+    color: #ffffff;
+    cursor: pointer;
+    outline: none;
+    font-size: 16px;
+    margin-top: 5px;
+    margin-left: 30px;
+}
+.submit_stars:hover{
+    background: #D41715;
+    border: 1px solid #D41715;
+}
+
+

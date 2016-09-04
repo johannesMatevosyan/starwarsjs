@@ -1,5 +1,4 @@
 $( document ).ready(function() {
-    console.log('ready');
 
     (function($){
         $.fn.starwarsjs = function(options){
@@ -28,7 +27,6 @@ function traverse(starwarsjs){
                 $(this).prevAll().andSelf().addClass('over');
             },
             function() {
-                $(this).removeClass('over');
                 $(this).prevAll().andSelf().removeClass('over');
             }
         );

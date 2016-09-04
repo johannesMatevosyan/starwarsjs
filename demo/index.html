@@ -99,7 +99,7 @@
             <h3>Installation</h3>
             <div class="section_content">
                 <ul class="installation_list">
-                    <li>First of all download and unpack zip file from <a class="github" href="https://github.com/johannesMatevosyan/starwarsjs">github repository</a>.
+                    <li>First of all download and unpack zip file from <a class="github" href="https://github.com/johannesMatevosyan/starwarsjs" target="_blank">github repository</a>.
                         Then include the CSS at the top of your page in your <head> tag:</li>
                     <li>
                     <pre class="sw_code">
@@ -149,7 +149,7 @@
                                         <span><</span>span <span class="cnt_attr">class</span>=<span class="cnt_string">"rate_star"</span> <span class="cnt_attr">data-id</span>=<span class="cnt_string">"5"</span><span>></span><span><</span>/span></span>
                                     </div>
                                     <div class="cnt_html">
-                                        <span><</span>input <span class="cnt_attr">type</span>="hidden" <span class="cnt_attr">class</span>=<span class="cnt_string">"get_star"</span> <span class="cnt_attr">value</span>=<span class="cnt_string">""</span><span>> </span>
+                                        <span><</span>input <span class="cnt_attr">type</span>=<span class="cnt_string">"hidden"</span> <span class="cnt_attr">class</span>=<span class="cnt_string">"get_star"</span> <span class="cnt_attr">value</span>=<span class="cnt_string">""</span><span>> </span>
                                     </div>
 
                                     <span><</span>/div> <br>
@@ -172,7 +172,8 @@
         <h3>Initialize StarWarsJS.js</h3>
         <p>
             The class names of row and single star item should be included in selector in order to initialize the plugin.
-            <i>Note:</i> Do not forget to wrap code inside <span class="selected">$( document ).ready()</span>
+            <i>Note:</i> Do not forget to wrap code inside <span class="selected">$( document ).ready()</span>.
+            All you need is to fetch values from input fields written in code.
         </p>
         <div>
              <pre class="sw_code">
@@ -187,15 +188,6 @@
     <script>
         $( document ).ready(function() {
             $('.rate_row .rate_star').starwarsjs();
-
-            $('#test_stars').on('submit', function(e){
-                e.preventDefault();
-                $(this).find('.rate_row > input.get_star').each(function(){
-                    var star_id = $(this).val();
-                            console.log(star_id);
-                });
-            });
-
         });
     </script>
 

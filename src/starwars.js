@@ -36,9 +36,7 @@ function traverse(starwarsjs){
             $(this).addClass('checked');
             $(this).prevAll().addClass('checked');
             $(this).nextAll().removeClass('checked');
-
             // check if numbers are set true
-
         });
     });
 

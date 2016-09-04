@@ -116,6 +116,12 @@ ul.browser_support_list li{
     margin: 5px auto;
     text-align: center;
 }
+.github{
+    color: #ffff00;
+}
+.github:hover{
+    color: #ffffff;
+}
 
 pre.sw_code{
     margin: 10px 0 20px 0;

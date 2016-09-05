@@ -20,6 +20,7 @@ $( document ).ready(function() {
                 count: settings.count,
                 disable: settings.disable,
                 disable_class : "disable",
+                input_class : "get_rate",
             };
 
             console.log(starwarsjs);
@@ -46,8 +47,8 @@ function append_stars(starwarsjs){
                 }else{
                     $(this).append("<span class='" + starwarsjs.star +"' data-value='" + i + "'></span>");
                 }
-
             }
+            $(this).append("<input type='hidden' class='" + starwarsjs.input_class + "' value=''>");
         }else if(starwarsjs.star_number > 1 && starwarsjs.range == '' && starwarsjs.count > 1){
 
             var i = 1, step  = i;
@@ -61,6 +62,7 @@ function append_stars(starwarsjs){
                     step += starwarsjs.count;
                 }
             }
+            $(this).append("<input type='hidden' class='" + starwarsjs.input_class + "' value=''>");
         }
 
         if(starwarsjs.range && starwarsjs.range.length == 2 && starwarsjs.count == 1){
@@ -73,6 +75,8 @@ function append_stars(starwarsjs){
                     $(this).append("<span class='" + starwarsjs.star +"' data-value='" + j + "'></span>"); // set data-value attributes
                 }
             }
+            $(this).append("<input type='hidden' class='" + starwarsjs.input_class + "' value=''>");
+
         }else if(starwarsjs.range && starwarsjs.range.length == 2 && starwarsjs.count > 1){
             var j = starwarsjs.range[0], step  = j;
             for(j; j <= starwarsjs.range[1]; j++){
@@ -85,8 +89,8 @@ function append_stars(starwarsjs){
                     $(this).append("<span class='" + starwarsjs.star +"' data-value='" + step + "'></span>");  // set data-value attributes with incremented steps
                     step += starwarsjs.count;
                 }
-
             }
+            $(this).append("<input type='hidden' class='" + starwarsjs.input_class + "' value=''>");
         }
 
 
@@ -95,7 +99,6 @@ function append_stars(starwarsjs){
 }
 
 function traverse(starwarsjs){
-    //$( ".rate_star" ).prop( "disabled", true );
     if(starwarsjs.star_number) {
 
         $(starwarsjs.target + ' .' + starwarsjs.star).each(function () {
@@ -109,7 +112,7 @@ function traverse(starwarsjs){
             );
             $(this).on('click', function () { // get rate after click
                 var star_id = $(this).attr('data-value');
-                $(this).siblings('input.get_star').val(star_id);
+                $(this).siblings("input." + starwarsjs.input_class).val(star_id);
                 $(this).addClass('checked');
                 $(this).prevAll().addClass('checked');
                 $(this).nextAll().removeClass('checked');

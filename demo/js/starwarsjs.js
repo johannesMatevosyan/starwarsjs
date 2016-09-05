@@ -1,19 +1,23 @@
 $( document ).ready(function() {
 
     (function($){
+        var count = 1;
+
         $.fn.starwarsjs = function(options){
             var settings = $.extend({
                 target : this.selector,
-                star_number : options.star_number,
+                star_number : 1,
                 star : "rate_star",
-                range : ''
+                range : '',
+                count : 1
             }, options );
 
             var starwarsjs = {
                 target: settings.target,
                 star_number: settings.star_number,
                 star: settings.star,
-                range: settings.range
+                range: settings.range,
+                count: settings.count
             };
 
             console.log(starwarsjs);
@@ -29,14 +33,32 @@ $( document ).ready(function() {
 
 function append_stars(starwarsjs){
     $(starwarsjs.target).each(function(){
-        if(starwarsjs.star_number && starwarsjs.range == ''){
+
+        if(starwarsjs.star_number > 1 && starwarsjs.range == '' && starwarsjs.count == 1){
+
             for(var i = 1; i <= starwarsjs.star_number; i++){
                 $(this).append("<span class='" + starwarsjs.star +"' data-value='" + i + "'></span>");
             }
+        }else if(starwarsjs.star_number > 1 && starwarsjs.range == '' && starwarsjs.count > 1){
+
+            var i = 1, step  = i;
+            for(i; i <= starwarsjs.star_number; i++){
+                $(this).append("<span class='" + starwarsjs.star +"' data-value='" + step + "'></span>");
+                step += starwarsjs.count;
+            }
         }
-        if(starwarsjs.range && starwarsjs.range.length == 2){
+
+        if(starwarsjs.range && starwarsjs.range.length == 2 && starwarsjs.count == 1){
+
             for(var j = starwarsjs.range[0]; j <= starwarsjs.range[1]; j++){
                 $(this).append("<span class='" + starwarsjs.star +"' data-value='" + j + "'></span>");
+            }
+        }else if(starwarsjs.range && starwarsjs.range.length == 2 && starwarsjs.count > 1){
+console.log(starwarsjs.range[0]);
+            var j = starwarsjs.range[0], step  = j;
+            for(j; j <= starwarsjs.range[1]; j++){
+                $(this).append("<span class='" + starwarsjs.star +"' data-value='" + step + "'></span>");
+                step += starwarsjs.count;
             }
         }
     });

@@ -4,15 +4,19 @@ $( document ).ready(function() {
         $.fn.starwarsjs = function(options){
             var settings = $.extend({
                 target : this.selector,
-                range : options.range,
-                star : "rate_star"
+                star_number : options.star_number,
+                star : "rate_star",
+                range : ''
             }, options );
 
             var starwarsjs = {
                 target: settings.target,
-                range: settings.range,
-                star: settings.star
+                star_number: settings.star_number,
+                star: settings.star,
+                range: settings.range
             };
+
+            console.log(starwarsjs);
 
             append_stars(starwarsjs);
             traverse(starwarsjs);
@@ -25,8 +29,13 @@ $( document ).ready(function() {
 
 function append_stars(starwarsjs){
     $(starwarsjs.target).each(function(){
-        if(starwarsjs.range){
-            for(var i = 1; i <= starwarsjs.range; i++){
+        if(starwarsjs.star_number && starwarsjs.range == ''){
+            for(var i = 1; i <= starwarsjs.star_number; i++){
+                $(this).append("<span class='" + starwarsjs.star +"' data-id='" + i + "'></span>");
+            }
+        }
+        if(starwarsjs.range && starwarsjs.range.length == 2){
+            for(var j = starwarsjs.range[0]; j <= starwarsjs.range[1]; j++){
                 $(this).append("<span class='" + starwarsjs.star +"' data-id='" + i + "'></span>");
             }
         }
@@ -34,7 +43,7 @@ function append_stars(starwarsjs){
 }
 
 function traverse(starwarsjs){
-    if(starwarsjs.range) {
+    if(starwarsjs.star_number) {
 
         $(starwarsjs.target + ' .' + starwarsjs.star).each(function () {
             $(this).hover( // change star's color after mouse hover

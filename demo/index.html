@@ -139,7 +139,7 @@
             </p>
             <div>
                  <pre class="sw_code">
-                    <code>$(<span class="cnt_string">' .rate_row .rate_star '</span>).starwarsjs();</code>
+                    <code>$(<span class="cnt_string">' .rate_row '</span>).starwarsjs();</code>
                  </pre>
             </div>
         </section>
@@ -147,10 +147,10 @@
             <h3>Options</h3>
             <div class="section_content">
                 <pre class="sw_code">
-                    <code>$(<span class="cnt_string">' #my_gallery '</span>).centipedejs({
+                    <code>$(<span class="cnt_string">' .rate_row '</span>).centipedejs({
                         <div class="options_js">
                             <ul>
-                                <li><span class="options_js_keys">star_number&nbsp;:  </span><span class="options_js_val">&nbsp;"5</span>, </li>
+                                <li><span class="options_js_keys">stars&nbsp;:  </span><span class="options_js_val">&nbsp;5</span>, </li>
                                 <li><span class="options_js_keys">range&nbsp;:  </span><span class="options_js_val">&nbsp;[2, 6]</span>, </li>
                                 <li><span class="options_js_keys">count&nbsp;:  </span><span class="options_js_val">&nbsp;2</span>, </li>
                                 <li><span class="options_js_keys">disable&nbsp;:  </span><span class="options_js_val">&nbsp;4</span>, </li>
@@ -168,7 +168,7 @@
                         <td><h4>Description</h4></td>
                     </tr>
                     <tr>
-                        <td class="key">star_number:</td>
+                        <td class="key">stars:</td>
                         <td class="default">5</td>
                         <td class="value">Set the number of stars per row.</td>
                     </tr>
@@ -191,25 +191,56 @@
                         <td class="default">0</td>
                         <td class="value"><span class="selected">disable</span> option allows to have inactive star icons which are not clickable.
                             When the number bigger than zero is set for this option then all next values till the end of
-                            defined range are becoming desibled.
-                        <strong><i>Note:</i></strong> the number of disabled star icons should not exceed the <span class="selected">star_number</span>
-                        or the value of the last element of a <span class="selected">range</span> array.</td>
+                            defined range are becoming disabled.
+                        <strong><i>Note:</i></strong> the number of disabled star icons should not exceed the <span class="selected">stars</span>
+                        or the value of the last element of a <span class="selected">range</span> array.<br>
+                            <i>For more info check presentations below:</i>
+                        </td>
                     </tr>
                 </table>
+
+            </div>
+        </section>
+        <section class="description">
+            <h3>Set stars</h3>
+            <p>Write random number of stars for a certain row.</p>
+            <div class="gif">
+                <img src="img/stars.gif" class="b_border" alt="Set stars">
+            </div>
+
+            <h3>Define range</h3>
+            <p>Write random number of stars for a certain row.</p>
+            <div class="gif">
+                <img src="img/range.gif" class="b_border" alt="Define range">
+            </div>
+
+            <h3>Change the increment value</h3>
+            <p>Change the increment steps value from one (default) to a random.</p>
+            <div class="gif">
+                <img src="img/count.gif" class="b_border" alt="Define range">
+            </div>
+
+            <h3>Disable icons</h3>
+            <p>Disable needed amount of icons.</p>
+            <div class="gif">
+                <img src="img/disable.gif" class="b_border" alt="Define range">
             </div>
         </section>
     </div>
     <script src="js/jquery/jquery-2.1.3.min.js"></script>
     <script src="js/starwarsjs.js"></script>
     <script>
+
         $( document ).ready(function() {
-            $('.rate_row').starwarsjs({
-                star_number : 5,
-                range : [2, 6],
-                count : 2,
-                disable : 4
-            });
+                $('.rate_row').starwarsjs({
+                    stars : 5,
+                    range : [2, 7],
+                    count : 2,
+                    disable : 5
+                });
+
         });
+
     </script>
 </body>
 </html>

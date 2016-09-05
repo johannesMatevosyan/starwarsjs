@@ -102,6 +102,15 @@ section h3{
     padding-bottom: 5px;
     margin-bottom: 20px;
 }
+section.description h3{
+    color: #000000;
+    font-size: 16px;
+    font-family: 'open_sansregular';
+    text-transform: capitalize;
+    padding-bottom: 5px;
+    margin-bottom: 5px;
+    margin-top: 10px;
+}
 section p{
     color: #000000;
 }
@@ -115,6 +124,9 @@ ul.browser_support_list li{
 .gif{
     margin: 5px auto;
     text-align: center;
+}
+.b_border{
+    border: 1px solid #000000;
 }
 .github{
     color: #ffff00;

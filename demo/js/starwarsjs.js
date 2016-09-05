@@ -6,7 +6,7 @@ $( document ).ready(function() {
         $.fn.starwarsjs = function(options){
             var settings = $.extend({
                 target : this.selector,
-                star_number : 1,
+                stars : 1,
                 range : [],
                 count : 1,
                 disable : 0
@@ -15,7 +15,7 @@ $( document ).ready(function() {
             var starwarsjs = {
                 target: settings.target,
                 star : "rate_star",
-                star_number: settings.star_number,
+                stars: settings.stars,
                 range: settings.range,
                 count: settings.count,
                 disable: settings.disable,
@@ -37,24 +37,23 @@ $( document ).ready(function() {
 function append_stars(starwarsjs){
     $(starwarsjs.target).each(function(){
 
-        if(starwarsjs.star_number > 1 && starwarsjs.range == '' && starwarsjs.count == 1){
+        if(starwarsjs.stars > 1 && starwarsjs.range == '' && starwarsjs.count == 1){
 
+            for(var i = 1; i <= starwarsjs.stars; i++){
 
-            for(var i = 1; i <= starwarsjs.star_number; i++){
-
-                if(i > starwarsjs.disable && starwarsjs.star_number > starwarsjs.disable){
+                if(i > starwarsjs.disable && starwarsjs.stars > starwarsjs.disable && starwarsjs.disable > 0){
                     $(this).append("<span class='" + starwarsjs.star + ' '  + starwarsjs.disable_class + "' data-value='" + i + "'></span>"); // set data-value attributes
                 }else{
                     $(this).append("<span class='" + starwarsjs.star +"' data-value='" + i + "'></span>");
                 }
             }
             $(this).append("<input type='hidden' class='" + starwarsjs.input_class + "' value=''>");
-        }else if(starwarsjs.star_number > 1 && starwarsjs.range == '' && starwarsjs.count > 1){
+        }else if(starwarsjs.stars > 1 && starwarsjs.range == '' && starwarsjs.count > 1){
 
             var i = 1, step  = i;
-            for(i; i <= starwarsjs.star_number; i++){
+            for(i; i <= starwarsjs.stars; i++){
 
-                if(i > starwarsjs.disable && starwarsjs.star_number > starwarsjs.disable){
+                if(i > starwarsjs.disable && starwarsjs.stars > starwarsjs.disable && starwarsjs.disable > 0){
                     $(this).append("<span class='" + starwarsjs.star + ' '  + starwarsjs.disable_class + "' data-value='" + step + "'></span>");  // set data-value attributes with incremented steps
                     step += starwarsjs.count;
                 }else{
@@ -69,7 +68,7 @@ function append_stars(starwarsjs){
 
             for(var j = starwarsjs.range[0]; j <= starwarsjs.range[1]; j++){
 
-                if(j > starwarsjs.disable && starwarsjs.range[1] > starwarsjs.disable){
+                if(j > starwarsjs.disable && starwarsjs.range[1] > starwarsjs.disable && starwarsjs.disable > 0){
                     $(this).append("<span class='" + starwarsjs.star + ' '  + starwarsjs.disable_class + "' data-value='" + j + "'></span>"); // set data-value attributes
                 }else{
                     $(this).append("<span class='" + starwarsjs.star +"' data-value='" + j + "'></span>"); // set data-value attributes
@@ -81,7 +80,7 @@ function append_stars(starwarsjs){
             var j = starwarsjs.range[0], step  = j;
             for(j; j <= starwarsjs.range[1]; j++){
 
-                if(j > starwarsjs.disable && starwarsjs.range[1] > starwarsjs.disable){
+                if(j > starwarsjs.disable && starwarsjs.range[1] > starwarsjs.disable && starwarsjs.disable > 0){
                     $(this).append("<span class='" + starwarsjs.star + ' '  + starwarsjs.disable_class + "' data-value='" + step + "'></span>");  // set data-value attributes with incremented steps
                     step += starwarsjs.count;
                 }else{
@@ -98,7 +97,7 @@ function append_stars(starwarsjs){
 }
 
 function traverse(starwarsjs){
-    if(starwarsjs.star_number) {
+    if(starwarsjs.stars) {
 
         $(starwarsjs.target + ' .' + starwarsjs.star).each(function () {
             $(this).hover( // change star's color after mouse hover

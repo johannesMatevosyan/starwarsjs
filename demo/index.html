@@ -9,7 +9,10 @@
     <h1 class="head"><span>Hovhannes Matevosyan</span></h1>
     <div class="wrapper">
         <div class="wrap_form">
-            <div class="rate_row">
+            <div class="rate_row"></div>
+            <div class="rate_row"></div>
+
+        <!--    <div class="rate_row">
                 <span class="rate_star" data-id="1"></span>
                 <span class="rate_star" data-id="2"></span>
                 <span class="rate_star" data-id="3"></span>
@@ -40,15 +43,7 @@
                 <span class="rate_star" data-id="4"></span>
                 <span class="rate_star" data-id="5"></span>
                 <input type="hidden" class="get_star" value="">
-            </div>
-            <div class="rate_row">
-                <span class="rate_star" data-id="1"></span>
-                <span class="rate_star" data-id="2"></span>
-                <span class="rate_star" data-id="3"></span>
-                <span class="rate_star" data-id="4"></span>
-                <span class="rate_star" data-id="5"></span>
-                <input type="hidden" class="get_star" value="">
-            </div>
+            </div> -->
         </div><!--.wrap_form-->
         <div class="wrap_desc">
             <div class="desc">
@@ -155,7 +150,6 @@
                                     <span><</span>/div> <br>
                                 </div>
 
-
                             </code>
                         </pre>
                     </li>
@@ -187,7 +181,11 @@
     <script src="js/starwarsjs.js"></script>
     <script>
         $( document ).ready(function() {
-            $('.rate_row .rate_star').starwarsjs();
+            $('.rate_row').starwarsjs({
+                range : 8,
+                start_val : 2,
+                end_val : 6
+            });
         });
     </script>
 

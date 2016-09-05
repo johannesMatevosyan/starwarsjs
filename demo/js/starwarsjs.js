@@ -3,12 +3,18 @@ $( document ).ready(function() {
     (function($){
         $.fn.starwarsjs = function(options){
             var settings = $.extend({
-                target : this.selector
+                target : this.selector,
+                range : options.range,
+                star : "rate_star"
             }, options );
 
             var starwarsjs = {
-                target: settings.target
+                target: settings.target,
+                range: settings.range,
+                star: settings.star
             };
+
+            append_stars(starwarsjs);
             traverse(starwarsjs);
             presentation(starwarsjs);
             return this;
@@ -17,28 +23,38 @@ $( document ).ready(function() {
 
 });
 
-function traverse(starwarsjs){
-
+function append_stars(starwarsjs){
     $(starwarsjs.target).each(function(){
-        $(this).hover( // change star's color after mouse hover
-            function() {
-                $(this).prevAll().andSelf().addClass('over');
-            },
-            function() {
-                $(this).prevAll().andSelf().removeClass('over');
+        if(starwarsjs.range){
+            for(var i = 1; i <= starwarsjs.range; i++){
+                $(this).append("<span class='" + starwarsjs.star +"' data-id='" + i + "'></span>");
             }
-        );
-        $(this).on('click', function(){ // get rate after click
-            var star_id = $(this).attr('data-id');
-            $(this).siblings('input.get_star').val(star_id);
-            $(this).addClass('checked');
-            $(this).prevAll().addClass('checked');
-            $(this).nextAll().removeClass('checked');
-        });
+        }
     });
-
 }
 
+function traverse(starwarsjs){
+    if(starwarsjs.range) {
+
+        $(starwarsjs.target + ' .' + starwarsjs.star).each(function () {
+            $(this).hover( // change star's color after mouse hover
+                function () {
+                    $(this).prevAll().andSelf().addClass('over');
+                },
+                function () {
+                    $(this).prevAll().andSelf().removeClass('over');
+                }
+            );
+            $(this).on('click', function () { // get rate after click
+                var star_id = $(this).attr('data-id');
+                $(this).siblings('input.get_star').val(star_id);
+                $(this).addClass('checked');
+                $(this).prevAll().addClass('checked');
+                $(this).nextAll().removeClass('checked');
+            });
+        });
+    }
+}
 
 function presentation(){
     $("#change_fonts").bind('keyup mouseup', function () {

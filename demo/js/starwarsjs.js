@@ -7,9 +7,9 @@ $( document ).ready(function() {
             var settings = $.extend({
                 target : this.selector,
                 star_number : 1,
-                range : '',
+                range : [],
                 count : 1,
-                disable : 0,
+                disable : 0
             }, options );
 
             var starwarsjs = {
@@ -20,7 +20,7 @@ $( document ).ready(function() {
                 count: settings.count,
                 disable: settings.disable,
                 disable_class : "disable",
-                input_class : "get_rate",
+                input_class : "get_rate"
             };
 
             console.log(starwarsjs);
@@ -82,7 +82,6 @@ function append_stars(starwarsjs){
             for(j; j <= starwarsjs.range[1]; j++){
 
                 if(j > starwarsjs.disable && starwarsjs.range[1] > starwarsjs.disable){
-                    console.log('sdsdsd');
                     $(this).append("<span class='" + starwarsjs.star + ' '  + starwarsjs.disable_class + "' data-value='" + step + "'></span>");  // set data-value attributes with incremented steps
                     step += starwarsjs.count;
                 }else{
@@ -123,7 +122,6 @@ function traverse(starwarsjs){
 
 function presentation(){
     $("#change_fonts").bind('keyup mouseup', function () {
-        console.log($(this).val());
         $('.rate_star').css({ "fontSize": $(this).val() + "px"})
     });
     $("#change_color").on('change', function () {

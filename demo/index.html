@@ -130,19 +130,82 @@
                 </ul>
             </div>
         </section>
-    <section>
-        <h3>Initialize StarWarsJS.js</h3>
-        <p>
-            The class names of row and single star item should be included in selector in order to initialize the plugin.
-            <i>Note:</i> Do not forget to wrap code inside <span class="selected">$( document ).ready()</span>.
-            All you need is to fetch values from input fields written in code.
-        </p>
-        <div>
-             <pre class="sw_code">
-                <code>$(<span class="cnt_string">' .rate_row .rate_star '</span>).starwarsjs();</code>
-             </pre>
-        </div>
-    </section>
+        <section>
+            <h3>Initialize StarWarsJS.js</h3>
+            <p>
+                The class names of row and single star item should be included in selector in order to initialize the plugin.
+                <i>Note:</i> Do not forget to wrap code inside <span class="selected">$( document ).ready()</span>.
+                All you need is to fetch values from input fields written in code.
+            </p>
+            <div>
+                 <pre class="sw_code">
+                    <code>$(<span class="cnt_string">' .rate_row .rate_star '</span>).starwarsjs();</code>
+                 </pre>
+            </div>
+        </section>
+        <section class="options">
+            <h3>Options</h3>
+            <div class="section_content">
+                <!--
+                $('.rate_row').starwarsjs({
+                    star_number : 5,
+                    range : [2, 6],
+                    count : 2,
+                    disable : 4
+                });
+                -->
+                <pre class="sw_code">
+                    <code>$(<span class="cnt_string">' #my_gallery '</span>).centipedejs({
+                        <div class="options_js">
+                            <ul>
+                                <li><span class="options_js_keys">star_number&nbsp;:  </span><span class="options_js_val">&nbsp;"5</span>, </li>
+                                <li><span class="options_js_keys">range&nbsp;:  </span><span class="options_js_val">&nbsp;[2, 6]</span>, </li>
+                                <li><span class="options_js_keys">count&nbsp;:  </span><span class="options_js_val">&nbsp;2</span>, </li>
+                                <li><span class="options_js_keys">disable&nbsp;:  </span><span class="options_js_val">&nbsp;4</span>, </li>
+                            </ul>
+                        </div>
+                        });
+                    </code>
+                </pre>
+            </div>
+            <div class="section_content">
+                <table class="options_list">
+                    <tr>
+                        <td><h4>Option</h4></td>
+                        <td><h4>Default</h4></td>
+                        <td><h4>Description</h4></td>
+                    </tr>
+                    <tr>
+                        <td class="key">star_number:</td>
+                        <td class="default">5</td>
+                        <td class="value">Set the number of stars per row.</td>
+                    </tr>
+                    <tr>
+                        <td class="key">range:</td>
+                        <td class="default">[ ]</td>
+                        <td class="value">By default the values of per star are starting from one and ending with the number of stars.
+                            By activating <span class="selected">range</span> option it is possible to define different start
+                            and end values for rate's range. The first element of array stands for the start value and the last element
+                            of array stands for the end value of range.</td>
+                    </tr>
+                    <tr>
+                        <td class="key">count:</td>
+                        <td class="default">1</td>
+                        <td class="value">Initially the values of rate are incrementing by one. In case you want to
+                            increment rate values by another number then the choice is yours.</td>
+                    </tr>
+                    <tr>
+                        <td class="key">disable:</td>
+                        <td class="default">0</td>
+                        <td class="value"><span class="selected">disable</span> option allows to have inactive star icons which are not clickable.
+                            When the number bigger than zero is set for this option then all next values till the end of
+                            defined range are becoming desibled.
+                        <strong><i>Note:</i></strong> the number of disabled star icons should not exceed the <span class="selected">star_number</span>
+                        or the value of the last element of a <span class="selected">range</span> array.</td>
+                    </tr>
+                </table>
+            </div>
+        </section>
     </div>
 
     <script src="js/jquery/jquery-2.1.3.min.js"></script>

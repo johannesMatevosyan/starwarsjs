@@ -123,7 +123,7 @@ ul.browser_support_list li{
     color: #ffffff;
 }
 pre.sw_code{
-    margin: 10px 0 20px 0;
+    margin: 10px 0 10px 0;
     background-color: whitesmoke;
     border-radius: 4px;
     padding: 8px 5px 8px 25px;
@@ -180,6 +180,31 @@ pre.sw_code code .options_js_val{
     display: inline-block;
     color: #905;
     font-size: 12px;
+}
+.options_list tr td{
+    vertical-align: top;
+    padding: 0 5px 8px 5px;
+}
+
+.options_list tr td h4{
+    font-size: 14px;
+    line-height: 20px;
+}
+.options_list tr td.key{
+    font-size: 14px;
+    font-weight: normal;
+    line-height: 20px;
+}
+.options_list tr td.default{
+    font-size: 14px;
+    font-weight: normal;
+    line-height: 20px;
+    min-width: 120px;
+}
+.options_list tr td.value{
+    font-size: 14px;
+    font-weight: normal;
+    line-height: 20px;
 }
 .selected{
     font-family: 'open_sansregular';

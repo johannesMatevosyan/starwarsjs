@@ -7,17 +7,19 @@ $( document ).ready(function() {
             var settings = $.extend({
                 target : this.selector,
                 star_number : 1,
-                star : "rate_star",
                 range : '',
-                count : 1
+                count : 1,
+                disable : 0,
             }, options );
 
             var starwarsjs = {
                 target: settings.target,
+                star : "rate_star",
                 star_number: settings.star_number,
-                star: settings.star,
                 range: settings.range,
-                count: settings.count
+                count: settings.count,
+                disable: settings.disable,
+                disable_class : "disable",
             };
 
             console.log(starwarsjs);
@@ -36,35 +38,64 @@ function append_stars(starwarsjs){
 
         if(starwarsjs.star_number > 1 && starwarsjs.range == '' && starwarsjs.count == 1){
 
+
             for(var i = 1; i <= starwarsjs.star_number; i++){
-                $(this).append("<span class='" + starwarsjs.star +"' data-value='" + i + "'></span>");
+
+                if(i > starwarsjs.disable && starwarsjs.star_number > starwarsjs.disable){
+                    $(this).append("<span class='" + starwarsjs.star + ' '  + starwarsjs.disable_class + "' data-value='" + i + "'></span>"); // set data-value attributes
+                }else{
+                    $(this).append("<span class='" + starwarsjs.star +"' data-value='" + i + "'></span>");
+                }
+
             }
         }else if(starwarsjs.star_number > 1 && starwarsjs.range == '' && starwarsjs.count > 1){
 
             var i = 1, step  = i;
             for(i; i <= starwarsjs.star_number; i++){
-                $(this).append("<span class='" + starwarsjs.star +"' data-value='" + step + "'></span>");
-                step += starwarsjs.count;
+
+                if(i > starwarsjs.disable && starwarsjs.star_number > starwarsjs.disable){
+                    $(this).append("<span class='" + starwarsjs.star + ' '  + starwarsjs.disable_class + "' data-value='" + step + "'></span>");  // set data-value attributes with incremented steps
+                    step += starwarsjs.count;
+                }else{
+                    $(this).append("<span class='" + starwarsjs.star +"' data-value='" + step + "'></span>");  // set data-value attributes with incremented steps
+                    step += starwarsjs.count;
+                }
             }
         }
 
         if(starwarsjs.range && starwarsjs.range.length == 2 && starwarsjs.count == 1){
 
             for(var j = starwarsjs.range[0]; j <= starwarsjs.range[1]; j++){
-                $(this).append("<span class='" + starwarsjs.star +"' data-value='" + j + "'></span>");
+
+                if(j > starwarsjs.disable && starwarsjs.range[1] > starwarsjs.disable){
+                    $(this).append("<span class='" + starwarsjs.star + ' '  + starwarsjs.disable_class + "' data-value='" + j + "'></span>"); // set data-value attributes
+                }else{
+                    $(this).append("<span class='" + starwarsjs.star +"' data-value='" + j + "'></span>"); // set data-value attributes
+                }
             }
         }else if(starwarsjs.range && starwarsjs.range.length == 2 && starwarsjs.count > 1){
-console.log(starwarsjs.range[0]);
             var j = starwarsjs.range[0], step  = j;
             for(j; j <= starwarsjs.range[1]; j++){
-                $(this).append("<span class='" + starwarsjs.star +"' data-value='" + step + "'></span>");
-                step += starwarsjs.count;
+
+                if(j > starwarsjs.disable && starwarsjs.range[1] > starwarsjs.disable){
+                    console.log('sdsdsd');
+                    $(this).append("<span class='" + starwarsjs.star + ' '  + starwarsjs.disable_class + "' data-value='" + step + "'></span>");  // set data-value attributes with incremented steps
+                    step += starwarsjs.count;
+                }else{
+                    $(this).append("<span class='" + starwarsjs.star +"' data-value='" + step + "'></span>");  // set data-value attributes with incremented steps
+                    step += starwarsjs.count;
+                }
+
             }
         }
+
+
+
     });
 }
 
 function traverse(starwarsjs){
+    //$( ".rate_star" ).prop( "disabled", true );
     if(starwarsjs.star_number) {
 
         $(starwarsjs.target + ' .' + starwarsjs.star).each(function () {

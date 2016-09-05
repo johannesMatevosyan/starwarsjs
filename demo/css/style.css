@@ -208,6 +208,11 @@ pre.sw_code code .options_js_val{
 .rate_star.checked{
     color: #F9D932;
 }
+.rate_star.disable{
+    cursor:not-allowed;
+    pointer-events: none;
+    color: #9C9B9B;
+}
 .submit_stars{
     padding: 3px 14px;
     background: #801513;

@@ -11,6 +11,7 @@
         <div class="wrap_form">
             <div class="rate_row"></div>
             <div class="rate_row"></div>
+            <div class="rate_row"></div>
 
         <!--    <div class="rate_row">
                 <span class="rate_star" data-id="1"></span>
@@ -128,20 +129,20 @@
 
                                     <span class="cnt_comments"><span><</span>!-- Wrap stars in a row --<span>> </span></span>
                                     <div class="cnt_html">
-                                        <span><</span>span <span class="cnt_attr">class</span>=<span class="cnt_string">"rate_star"</span> <span class="cnt_attr">data-id</span>=<span class="cnt_string">"1"</span><span>></span><span><</span>/span></span>
+                                        <span><</span>span <span class="cnt_attr">class</span>=<span class="cnt_string">"rate_star"</span> <span class="cnt_attr">data-value</span>=<span class="cnt_string">"1"</span><span>></span><span><</span>/span></span>
                                         <span class="cnt_comments"><span><</span>!-- Single Star --<span>> </span></span>
                                     </div>
                                     <div class="cnt_html">
-                                        <span><</span>span <span class="cnt_attr">class</span>=<span class="cnt_string">"rate_star"</span> <span class="cnt_attr">data-id</span>=<span class="cnt_string">"2"</span><span>></span><span><</span>/span></span>
+                                        <span><</span>span <span class="cnt_attr">class</span>=<span class="cnt_string">"rate_star"</span> <span class="cnt_attr">data-value</span>=<span class="cnt_string">"2"</span><span>></span><span><</span>/span></span>
                                     </div>
                                     <div class="cnt_html">
-                                        <span><</span>span <span class="cnt_attr">class</span>=<span class="cnt_string">"rate_star"</span> <span class="cnt_attr">data-id</span>=<span class="cnt_string">"3"</span><span>></span><span><</span>/span></span>
+                                        <span><</span>span <span class="cnt_attr">class</span>=<span class="cnt_string">"rate_star"</span> <span class="cnt_attr">data-value</span>=<span class="cnt_string">"3"</span><span>></span><span><</span>/span></span>
                                     </div>
                                     <div class="cnt_html">
-                                        <span><</span>span <span class="cnt_attr">class</span>=<span class="cnt_string">"rate_star"</span> <span class="cnt_attr">data-id</span>=<span class="cnt_string">"4"</span><span>></span><span><</span>/span></span>
+                                        <span><</span>span <span class="cnt_attr">class</span>=<span class="cnt_string">"rate_star"</span> <span class="cnt_attr">data-value</span>=<span class="cnt_string">"4"</span><span>></span><span><</span>/span></span>
                                     </div>
                                     <div class="cnt_html">
-                                        <span><</span>span <span class="cnt_attr">class</span>=<span class="cnt_string">"rate_star"</span> <span class="cnt_attr">data-id</span>=<span class="cnt_string">"5"</span><span>></span><span><</span>/span></span>
+                                        <span><</span>span <span class="cnt_attr">class</span>=<span class="cnt_string">"rate_star"</span> <span class="cnt_attr">data-value</span>=<span class="cnt_string">"5"</span><span>></span><span><</span>/span></span>
                                     </div>
                                     <div class="cnt_html">
                                         <span><</span>input <span class="cnt_attr">type</span>=<span class="cnt_string">"hidden"</span> <span class="cnt_attr">class</span>=<span class="cnt_string">"get_star"</span> <span class="cnt_attr">value</span>=<span class="cnt_string">""</span><span>> </span>
@@ -153,10 +154,10 @@
                             </code>
                         </pre>
                     </li>
-                    <li><p> Input element takes rate values from <span class="cnt_attr">data-id</span> attributes after
+                    <li><p> Input element takes rate values from <span class="cnt_attr">data-value</span> attributes after
                         a certain star was clicked.
                         Therefore you should specify desired rate range there. The code written above will provide
-                        rate from 1 to 5, according to values written in data-id attributes.</p>
+                        rate from 1 to 5, according to values written in data-value attributes.</p>
                     </li>
 
                 </ul>
@@ -183,7 +184,7 @@
         $( document ).ready(function() {
             $('.rate_row').starwarsjs({
                 star_number : 8,
-                range : [2, 4]
+                range : [3, 7]
             });
         });
     </script>

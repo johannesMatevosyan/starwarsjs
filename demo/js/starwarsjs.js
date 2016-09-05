@@ -31,12 +31,12 @@ function append_stars(starwarsjs){
     $(starwarsjs.target).each(function(){
         if(starwarsjs.star_number && starwarsjs.range == ''){
             for(var i = 1; i <= starwarsjs.star_number; i++){
-                $(this).append("<span class='" + starwarsjs.star +"' data-id='" + i + "'></span>");
+                $(this).append("<span class='" + starwarsjs.star +"' data-value='" + i + "'></span>");
             }
         }
         if(starwarsjs.range && starwarsjs.range.length == 2){
             for(var j = starwarsjs.range[0]; j <= starwarsjs.range[1]; j++){
-                $(this).append("<span class='" + starwarsjs.star +"' data-id='" + i + "'></span>");
+                $(this).append("<span class='" + starwarsjs.star +"' data-value='" + j + "'></span>");
             }
         }
     });
@@ -55,7 +55,7 @@ function traverse(starwarsjs){
                 }
             );
             $(this).on('click', function () { // get rate after click
-                var star_id = $(this).attr('data-id');
+                var star_id = $(this).attr('data-value');
                 $(this).siblings('input.get_star').val(star_id);
                 $(this).addClass('checked');
                 $(this).prevAll().addClass('checked');

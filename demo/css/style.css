@@ -102,6 +102,15 @@ section h3{
     padding-bottom: 5px;
     margin-bottom: 20px;
 }
+section.description h3{
+    color: #000000;
+    font-size: 16px;
+    font-family: 'open_sansregular';
+    text-transform: capitalize;
+    padding-bottom: 5px;
+    margin-bottom: 5px;
+    margin-top: 10px;
+}
 section p{
     color: #000000;
 }
@@ -116,6 +125,9 @@ ul.browser_support_list li{
     margin: 5px auto;
     text-align: center;
 }
+.b_border{
+    border: 1px solid #000000;
+}
 .github{
     color: #ffff00;
 }
@@ -123,7 +135,7 @@ ul.browser_support_list li{
     color: #ffffff;
 }
 pre.sw_code{
-    margin: 10px 0 20px 0;
+    margin: 10px 0 10px 0;
     background-color: whitesmoke;
     border-radius: 4px;
     padding: 8px 5px 8px 25px;
@@ -180,6 +192,31 @@ pre.sw_code code .options_js_val{
     display: inline-block;
     color: #905;
     font-size: 12px;
+}
+.options_list tr td{
+    vertical-align: top;
+    padding: 0 5px 8px 5px;
+}
+
+.options_list tr td h4{
+    font-size: 14px;
+    line-height: 20px;
+}
+.options_list tr td.key{
+    font-size: 14px;
+    font-weight: normal;
+    line-height: 20px;
+}
+.options_list tr td.default{
+    font-size: 14px;
+    font-weight: normal;
+    line-height: 20px;
+    min-width: 120px;
+}
+.options_list tr td.value{
+    font-size: 14px;
+    font-weight: normal;
+    line-height: 20px;
 }
 .selected{
     font-family: 'open_sansregular';

@@ -9,7 +9,8 @@ $( document ).ready(function() {
                 stars : 1,
                 range : [],
                 count : 1,
-                disable : 0
+                disable : 0,
+                default_stars : 0
             }, options );
 
             var starwarsjs = {
@@ -20,7 +21,8 @@ $( document ).ready(function() {
                 count: settings.count,
                 disable: settings.disable,
                 disable_class : "disable",
-                input_class : "get_rate"
+                input_class : "get_rate",
+                default_stars : settings.default_stars
             };
 
             console.log(starwarsjs);
@@ -99,7 +101,8 @@ function append_stars(starwarsjs){
 function traverse(starwarsjs){
     if(starwarsjs.stars) {
 
-        $(starwarsjs.target + ' .' + starwarsjs.star).each(function () {
+        $(starwarsjs.target + ' .' + starwarsjs.star).each(function (key, value) {
+
             $(this).hover( // change star's color after mouse hover
                 function () {
                     $(this).prevAll().andSelf().addClass('over');
@@ -108,6 +111,7 @@ function traverse(starwarsjs){
                     $(this).prevAll().andSelf().removeClass('over');
                 }
             );
+
             $(this).on('click', function () { // get rate after click
                 var star_id = $(this).attr('data-value');
                 $(this).siblings("input." + starwarsjs.input_class).val(star_id);
@@ -115,7 +119,25 @@ function traverse(starwarsjs){
                 $(this).prevAll().addClass('checked');
                 $(this).nextAll().removeClass('checked');
             });
+
+
         });
+
+        $(starwarsjs.target).each(function (key, value) {
+
+            if(starwarsjs.default_stars > 0 && key <= starwarsjs.default_stars && starwarsjs.stars >= starwarsjs.default_stars){
+
+                $(this).find("input." + starwarsjs.input_class).val(starwarsjs.default_stars);
+                var default_selected = $(this).find("input." + starwarsjs.input_class).val();
+
+                for(var k = 0; k < default_selected; k++){
+                    $(this).find('.rate_star').eq(k).addClass('checked');
+                }
+
+            }
+
+        });
+
     }
 }
 

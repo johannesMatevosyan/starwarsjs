@@ -125,15 +125,29 @@ function traverse(starwarsjs){
 
         $(starwarsjs.target).each(function (key, value) {
 
-            if(starwarsjs.default_stars > 0 && key <= starwarsjs.default_stars && starwarsjs.stars >= starwarsjs.default_stars){
+            if(starwarsjs.default_stars > 0 && starwarsjs.stars >= starwarsjs.default_stars
+                && starwarsjs.default_stars < starwarsjs.disable ){
 
-                $(this).find("input." + starwarsjs.input_class).val(starwarsjs.default_stars);
-                var default_selected = $(this).find("input." + starwarsjs.input_class).val();
+                $(this).find("input." + starwarsjs.input_class).attr('default', starwarsjs.default_stars);
+                var default_selected = $(this).find("input." + starwarsjs.input_class).attr('default');
 
                 for(var k = 0; k < default_selected; k++){
                     $(this).find('.rate_star').eq(k).addClass('checked');
                 }
 
+            }
+
+            if(starwarsjs.stars <= starwarsjs.default_stars){
+                console.log('The number of stars in a row should be bigger than the number of default stars');
+            }
+            if(starwarsjs.default_stars <= 0 || starwarsjs.default_stars <= 0){
+                console.log('The number of default stars should be bigger than 0');
+            }
+            if(starwarsjs.key >= starwarsjs.default_stars){
+                console.log('The number of Rows should be less than the number of default stars');
+            }
+            if(starwarsjs.default_stars >= starwarsjs.disable){
+                console.log('The number of disabled stars should not overlap with the number of default stars');
             }
 
         });

@@ -126,36 +126,48 @@ function traverse(starwarsjs){
         $(starwarsjs.target).each(function (key, value) {
 
             if(starwarsjs.default_stars > 0 && key <= starwarsjs.default_stars &&
-                starwarsjs.stars >= starwarsjs.default_stars && starwarsjs.default_stars < starwarsjs.disable ){
+                starwarsjs.stars >= starwarsjs.default_stars){
 
-                $(this).find("input." + starwarsjs.input_class).attr('default', starwarsjs.default_stars);
-                var default_selected = $(this).find("input." + starwarsjs.input_class).attr('default');
-
+                $(starwarsjs.target).find("input." + starwarsjs.input_class).attr('default-stars', starwarsjs.default_stars);
+                var default_selected = $(starwarsjs.target).find("input." + starwarsjs.input_class).attr('default-stars');
                 var set_last_default;
-                for(var k = 0; k < default_selected; k++){
-                    console.log('k ', k);
-                    $(this).find('.rate_star').eq(k).addClass('checked');
+
+                if(starwarsjs.disable > 0 && starwarsjs.default_stars < starwarsjs.disable){
+
+                    for(var k = 0; k < default_selected; k++){
+                        $(this).find('.rate_star').eq(k).addClass('checked');
+                    }
+                    set_last_default = $(starwarsjs.target).find('span.checked:last').attr('data-value');
+                    $(this).find("input." + starwarsjs.input_class).val(set_last_default);
+
+                }else if(starwarsjs.disable <= 0){
+
+                    for(var k = 0; k < default_selected; k++){
+                        $(this).find('.rate_star').eq(k).addClass('checked');
+                    }
+                    set_last_default = $(starwarsjs.target).find('span.checked:last').attr('data-value');
+                    $(this).find("input." + starwarsjs.input_class).val(set_last_default);
                 }
-                set_last_default = $(this).find('span.checked:last').attr('data-value');
-                $(this).find("input." + starwarsjs.input_class).val(set_last_default);
-                console.log('last_iteration', set_last_default);
+
 
             }
 
             if(starwarsjs.stars <= starwarsjs.default_stars){
                 console.log('The number of stars in a row should be bigger than the number of default stars');
             }
-            if(starwarsjs.default_stars <= 0 || starwarsjs.default_stars <= 0){
+            if(starwarsjs.default_stars < 0){
                 console.log('The number of default stars should be bigger than 0');
             }
             if(starwarsjs.key >= starwarsjs.default_stars){
                 console.log('The number of Rows should be less than the number of default stars');
             }
-            if(starwarsjs.default_stars >= starwarsjs.disable){
+            if(starwarsjs.disable > 0 && starwarsjs.default_stars > 0 && starwarsjs.default_stars >= starwarsjs.disable){
                 console.log('The number of disabled stars should not overlap with the number of default stars');
             }
 
         });
+
+
 
     }
 }

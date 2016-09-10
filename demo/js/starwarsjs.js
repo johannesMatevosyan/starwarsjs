@@ -125,15 +125,20 @@ function traverse(starwarsjs){
 
         $(starwarsjs.target).each(function (key, value) {
 
-            if(starwarsjs.default_stars > 0 && starwarsjs.stars >= starwarsjs.default_stars
-                && starwarsjs.default_stars < starwarsjs.disable ){
+            if(starwarsjs.default_stars > 0 && key <= starwarsjs.default_stars &&
+                starwarsjs.stars >= starwarsjs.default_stars && starwarsjs.default_stars < starwarsjs.disable ){
 
                 $(this).find("input." + starwarsjs.input_class).attr('default', starwarsjs.default_stars);
                 var default_selected = $(this).find("input." + starwarsjs.input_class).attr('default');
 
+                var set_last_default;
                 for(var k = 0; k < default_selected; k++){
+                    console.log('k ', k);
                     $(this).find('.rate_star').eq(k).addClass('checked');
                 }
+                set_last_default = $(this).find('span.checked:last').attr('data-value');
+                $(this).find("input." + starwarsjs.input_class).val(set_last_default);
+                console.log('last_iteration', set_last_default);
 
             }
 

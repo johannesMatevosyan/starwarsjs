@@ -10,7 +10,8 @@ $( document ).ready(function() {
                 range : [],
                 count : 1,
                 disable : 0,
-                default_stars : 0
+                default_stars : 0,
+                on_select : null
             }, options );
 
             var starwarsjs = {
@@ -22,10 +23,12 @@ $( document ).ready(function() {
                 disable: settings.disable,
                 disable_class : "disable",
                 input_class : "get_rate",
-                default_stars : settings.default_stars
+                default_stars : settings.default_stars,
+                on_select : settings.on_select
             };
 
             console.log(starwarsjs);
+            console.log(settings.on_select);
 
             append_stars(starwarsjs);
             traverse(starwarsjs);
@@ -93,8 +96,6 @@ function append_stars(starwarsjs){
             $(this).append("<input type='hidden' class='" + starwarsjs.input_class + "' value=''>");
         }
 
-
-
     });
 }
 
@@ -115,9 +116,14 @@ function traverse(starwarsjs){
             $(this).on('click', function () { // get rate after click
                 var star_id = $(this).attr('data-value');
                 $(this).siblings("input." + starwarsjs.input_class).val(star_id);
-                $(this).addClass('checked');
-                $(this).prevAll().addClass('checked');
+                $(this).prevAll().andSelf().addClass('checked');
                 $(this).nextAll().removeClass('checked');
+
+                if(starwarsjs.on_select && typeof starwarsjs.on_select === "function"){
+                    console.log("onselect called");
+                    starwarsjs.on_select(this, star_id);
+                }
+
             });
 
 

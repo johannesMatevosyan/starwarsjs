@@ -191,7 +191,7 @@
                         <td class="default">0</td>
                         <td class="value"><span class="selected">disable</span> option allows to have inactive star icons which are not clickable.
                             When a number bigger than zero is set for this option then all next values till the end of
-                            defined range are becoming disabled.
+                            defined range are becoming disabled. <br>
                         <strong><i>Note:</i></strong> the number of disabled star icons should not exceed the <span class="selected">stars</span>
                         or the value of the last element of a <span class="selected">range</span> array.
 
@@ -201,7 +201,8 @@
                         <td class="key">default_stars</td>
                         <td class="default">0</td>
                         <td class="value">In case user wants to have active items by default then <span class="selected">default_stars</span>
-                            option is ready. Just set the desired number of stars here.
+                            option is ready. Just set the desired number of stars here. This option will add
+                            <span class="selected">"default-stars"</span> attribute to the sibling inputs.<br>
                             <strong><i>Note:</i></strong> the number of default stars should not overlap with the number disabled
                             stars. In other words the number of default stars should be less than the number disabled stars.<br>
                             <i>For more info check presentations below:</i>
@@ -247,31 +248,20 @@
     <script src="js/starwarsjs.js"></script>
     <script>
 
+        $( document ).ready(function() {
 
+            var val = "AAAAA";
+                $('.rate_row').starwarsjs({
+                    stars : 5,
+                    range : [2, 8],
+                    count : 2,
+                    default_stars : 4,
+                    on_select : function(val){
+                        console.log('this is onselect ' + val + '  + ');
+                    }
+                });
 
-
-
-                                                    $( document ).ready(function() {
-
-                                                            $('.rate_row').starwarsjs({
-                                                                stars : 5,
-                                                                range : [2, 8],
-                                                                count : 2,
-                                                                default_stars : 4
-                                                            });
-
-                                                    });
-
-
-
-
-
-
-
-
-
-
-
+        });
 
 
     </script>

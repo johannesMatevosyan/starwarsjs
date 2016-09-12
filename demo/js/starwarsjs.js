@@ -181,7 +181,6 @@
             return star_id;
         }
 
-
     }
 
     // display options in demo

@@ -263,14 +263,17 @@
     <script>
 
         $( document ).ready(function() {
-
+            var world = "World";
             $('.rate_row').starwarsjs({
                 stars : 5,
-                count : 1
+                count : 1,
+                on_select : function(data){ // pass needed data to plugin
+                    console.log("Hello " + world + data);
+                }
             });
 
         });
-
+        
     </script>
 </body>
 </html>

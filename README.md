@@ -1,5 +1,5 @@
 <style>
-section {color: red}
+p {color: red}
 </style>
 # starwarsjs
 StarWarsJS is a lightweight jQuery-plugin to set stars for feedback. 

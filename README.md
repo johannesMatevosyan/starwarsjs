@@ -30,9 +30,7 @@ Also, one can set various range of rate numbers if needed.
 <p>
 Star icons are based on fonts which gives freedom to change the size and color of a certain icon by re-writing default CSS styles. Enjoy! :)
 </p>
-<div class="gif">
 <img src="https://cloud.githubusercontent.com/assets/2904795/18431942/7591f7d2-78f0-11e6-85ff-dd0082b19777.gif" alt="options"/>
-</div>
 </section>
 
 <section>
@@ -101,19 +99,26 @@ The class names of row and single star item should be included in selector in or
         <td class="default">[]</td>
         <td class="value">By default the values of per star are starting from one and ending with the number of stars. By activating "range" option it is possible to define different start and end values for rate's range. The first element of array stands for the start value and the last element of array stands for the end value of range. </td>
     </tr>
-    
     <tr>
         <td class="key">count:</td>
         <td class="default">1</td>
         <td class="value">Initially the values of rate are incrementing by one. In case you want to increment rate values by another number then the choice is yours. </td>
     </tr>
-    
     <tr>
         <td class="key">disable:</td>
         <td class="default">0</td>
         <td class="value">"disable" option allows to have inactive star icons which are not clickable. When a number bigger than zero is set for this option then all next values till the end of defined range are becoming disabled. 
-Note*: the number of disabled star icons should not exceed the stars or the value of the last element of a range array. </td>
+<b>Note*:</b> the number of disabled star icons should not exceed the stars or the value of the last element of a range array. </td>
+    </tr>
+    
+    <tr>
+        <td class="key">default_stars:</td>
+        <td class="default">0</td>
+        <td class="value">In case user wants to have active items by default then "default_stars" option is ready. Just set the desired number of stars here. This option will add "default-stars" attribute to the sibling inputs.
+<b>Note*:</b> the number of default stars should not overlap with the number disabled stars. In other words the number of default stars should be less than the number disabled stars. For more info check presentations below: </td>
     </tr>
 </table>
+
+
 </section>
 

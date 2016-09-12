@@ -204,7 +204,15 @@
                             option is ready. Just set the desired number of stars here. This option will add
                             <span class="selected">"default-stars"</span> attribute to the sibling inputs.<br>
                             <strong><i>Note:</i></strong> the number of default stars should not overlap with the number disabled
-                            stars. In other words the number of default stars should be less than the number disabled stars.<br>
+                            stars. In other words the number of default stars should be less than the number disabled stars.
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="key">on_select</td>
+                        <td class="default">null</td>
+                        <td class="value">
+                            Due to <span class="selected">on_select</span> option one can retrieve selected star's value
+                            or pass needed data to the <span class="selected">StarWarsJS</span> plugin.
                             <i>For more info check presentations below:</i>
                         </td>
                     </tr>
@@ -242,6 +250,12 @@
             <div class="gif">
                 <img src="img/set_default_stars.gif" class="b_border" alt="Set default stars">
             </div>
+
+            <h3>Benefits of On_Select option</h3>
+            <p>Fetch data from selected element or pass data to the plugin if needed. </p>
+            <div class="gif">
+                <img src="img/on-select.gif" class="b_border" alt="Benefits of on_select option">
+            </div>
         </section>
     </div>
     <script src="js/jquery/jquery-2.1.3.min.js"></script>
@@ -250,19 +264,14 @@
 
         $( document ).ready(function() {
 
-            var Val = "World";
-            $('.rate_row').starwarsjs({
-                stars : 5,
-                range : [2, 8],
-                count : 2,
-                default_stars : 4,
-                on_select : function(Val){
-                    console.log('Hello ' + Val);
-                }
-            });
+                var world = "World";
+                $('.rate_row').starwarsjs({
+                    stars : 5,
+                    count : 1
+                });
+
 
         });
-
 
     </script>
 </body>

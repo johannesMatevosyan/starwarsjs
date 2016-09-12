@@ -15,9 +15,12 @@ Also, one can set various range of rate numbers if needed.
                 It is possible to have infinite number of rows and stars in it.
                 Also, one can set various range of rate numbers. 
             </p> 
-            <p style="text-align: center;">
+            <div>
+                        <p style="text-align: center;">
 <img src="https://cloud.githubusercontent.com/assets/2904795/18429852/be8d0efe-78e6-11e6-8aeb-3cc2ac8c9abe.gif" alt="Intro">
 </p>
+            </div>
+
             
             <h3>Browser support</h3>
             <div class="section_content">

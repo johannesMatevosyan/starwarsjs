@@ -92,15 +92,14 @@ The class names of row and single star item should be included in selector in or
         <td><h4>Description</h4></td>
     </tr>
     <tr>
-        <td class="key">position:</td>
-        <td class="default">"bottom"</td>
-        <td class="value">Allows you to set position of sidebar, by default it is set to left, but you can position sidebar from left or right sides of a slider </td>
+        <td class="key">stars:</td>
+        <td class="default">5</td>
+        <td class="value">Set the number of stars per row. </td>
     </tr>
     <tr>
-        <td class="key">caption:</td>
-        <td class="default">false</td>
-        <td class="value">It is possible to add a caption. Therefore <span class="selected">caption</span> should be set to true
-            then divs with with a <span class="selected">c_caption</span> class should be added below each image placed inside <span class="selected">thumbnails</span> unordered list. </td>
+        <td class="key">range:</td>
+        <td class="default">[]</td>
+        <td class="value">By default the values of per star are starting from one and ending with the number of stars. By activating "range" option it is possible to define different start and end values for rate's range. The first element of array stands for the start value and the last element of array stands for the end value of range. </td>
     </tr>
 </table>
 </section>

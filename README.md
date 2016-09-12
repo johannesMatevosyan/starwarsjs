@@ -1,5 +1,7 @@
 <style>
-p {color: red}
+.markdown-body img {
+	border: 2px solid red;
+}
 </style>
 # starwarsjs
 StarWarsJS is a lightweight jQuery-plugin to set stars for feedback. 

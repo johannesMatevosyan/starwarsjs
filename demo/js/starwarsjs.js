@@ -179,7 +179,7 @@
 
             });
 
-            return
+            return star_id;
         }
 
 

@@ -119,6 +119,12 @@ The class names of row and single star item should be included in selector in or
     </tr>
 </table>
 
+<h3>Set stars</h3>
+<p>Write random number of stars for a certain row.</p>
+<img src="https://cloud.githubusercontent.com/assets/2904795/18433768/6829554a-78fa-11e6-937d-80d9d5b19b0c.gif" alt="Set stars">
 
+<h3>Define Range</h3>
+<p>Write random number of stars for a certain row.</p>
+<img src="https://cloud.githubusercontent.com/assets/2904795/18433837/c6366ea2-78fa-11e6-8858-4fdfdd29638c.gif" alt="Define Range">
 </section>
 

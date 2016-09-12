@@ -1,5 +1,7 @@
 # starwarsjs
-StarWarsJS is a jQuery-plugin to set feedback with the help of star icons.
+StarWarsJS is a lightweight jQuery-plugin to set stars for feedback. 
+It allows to have infinite number of rows and stars in it. 
+Also, one can set various range of rate numbers if needed.
 
 <section class="features">
             <h3>Features</h3>
@@ -9,9 +11,9 @@ StarWarsJS is a jQuery-plugin to set feedback with the help of star icons.
                 Also, one can set various range of rate numbers. 
             </p>
             <div class="gif">
-                <img src="img/star-intro.gif" alt="Intro"/>
+                <img src="https://cloud.githubusercontent.com/assets/2904795/18429852/be8d0efe-78e6-11e6-8aeb-3cc2ac8c9abe.gif" alt="Intro"/>
             </div>
-
+            
             <h3>Browser support</h3>
             <div class="section_content">
                 <ul class="browser_support_list">
@@ -29,4 +31,4 @@ StarWarsJS is a jQuery-plugin to set feedback with the help of star icons.
             <div class="gif">
                 <img src="img/star-options.gif" alt="options"/>
             </div>
-        </section>
+</section>

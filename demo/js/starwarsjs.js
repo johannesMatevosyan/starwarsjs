@@ -185,7 +185,6 @@
 
 }(jQuery));
 
-
 // display options in demo
 function presentation(){
     $("#change_fonts").bind('keyup mouseup', function () {

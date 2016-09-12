@@ -58,6 +58,18 @@ First of all download and unpack zip file from github repository. Then include t
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js">    
     
 ```
+Write your HTML:
+``` html
+<div class="rate_row"> <!-- Wrap stars in a row -->
+	<span class="rate_star" data-value="1"></span> <!-- Single Star -->
+	<span class="rate_star" data-value="2"></span>
+	<span class="rate_star" data-value="3"></span>
+	<span class="rate_star" data-value="4"></span>
+	<span class="rate_star" data-value="5"></span>
+	<input type="hidden" class="get_star" value="">
+</div> 
+```
+Input element takes rate values from data-value attributes after a certain star was clicked. Therefore you should specify desired rate range there. The code written above will provide rate from 1 to 5, according to values written in data-value attributes.
 
 
 </section>

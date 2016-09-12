@@ -39,3 +39,25 @@ Star icons are based on fonts which gives freedom to change the size and color o
 <img src="https://cloud.githubusercontent.com/assets/2904795/18431942/7591f7d2-78f0-11e6-85ff-dd0082b19777.gif" alt="options"/>
 </div>
 </section>
+
+<section>
+<h3>Installation</h3>
+
+First of all download and unpack zip file from github repository. Then include the CSS at the top of your page in your tag:
+
+```css
+
+    <link href="path/to/starwars.css" rel="stylesheet">   
+    
+```
+
+ Make sure to include jQuery in your page:
+
+```js
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js">    
+    
+```
+
+
+</section>

@@ -84,4 +84,24 @@ The class names of row and single star item should be included in selector in or
 	});
 ```
 
+<h3>Options</h3>
+<table class="options_list">
+    <tr>
+        <td><h4>Option</h4></td>
+        <td><h4>Default</h4></td>
+        <td><h4>Description</h4></td>
+    </tr>
+    <tr>
+        <td class="key">position:</td>
+        <td class="default">"bottom"</td>
+        <td class="value">Allows you to set position of sidebar, by default it is set to left, but you can position sidebar from left or right sides of a slider </td>
+    </tr>
+    <tr>
+        <td class="key">caption:</td>
+        <td class="default">false</td>
+        <td class="value">It is possible to add a caption. Therefore <span class="selected">caption</span> should be set to true
+            then divs with with a <span class="selected">c_caption</span> class should be added below each image placed inside <span class="selected">thumbnails</span> unordered list. </td>
+    </tr>
+</table>
 </section>
+

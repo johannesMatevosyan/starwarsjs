@@ -161,7 +161,6 @@
                         $(this).find("input." + starwarsjs.input_class).val(set_last_default);
                     }
 
-
                 }
 
                 if(starwarsjs.stars <= starwarsjs.default_stars){

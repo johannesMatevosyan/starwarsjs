@@ -2,6 +2,14 @@
 StarWarsJS is a lightweight jQuery-plugin to set stars for feedback. 
 It allows to have infinite number of rows and stars in it. 
 Also, one can set various range of rate numbers if needed.
+```css
+   .gif{
+       text-align: center;
+   }
+   .gif img{
+       display: inline-block;
+   }
+```html
 
 <section class="features">
             <h3>Features</h3>

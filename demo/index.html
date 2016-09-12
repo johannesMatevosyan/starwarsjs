@@ -250,16 +250,16 @@
 
         $( document ).ready(function() {
 
-            var val = "AAAAA";
-                $('.rate_row').starwarsjs({
-                    stars : 5,
-                    range : [2, 8],
-                    count : 2,
-                    default_stars : 4,
-                    on_select : function(val){
-                        console.log('this is onselect ' + val + '  + ');
-                    }
-                });
+            var Val = "World";
+            $('.rate_row').starwarsjs({
+                stars : 5,
+                range : [2, 8],
+                count : 2,
+                default_stars : 4,
+                on_select : function(Val){
+                    console.log('Hello ' + Val);
+                }
+            });
 
         });
 

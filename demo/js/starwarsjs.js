@@ -28,7 +28,6 @@ $( document ).ready(function() {
             };
 
             console.log(starwarsjs);
-            console.log(settings.on_select);
 
             append_stars(starwarsjs);
             traverse(starwarsjs);
@@ -121,7 +120,7 @@ function traverse(starwarsjs){
 
                 if(starwarsjs.on_select && typeof starwarsjs.on_select === "function"){
                     console.log("onselect called");
-                    starwarsjs.on_select(this, star_id);
+                    starwarsjs.on_select(data);
                 }
 
             });

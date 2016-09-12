@@ -134,5 +134,9 @@ The class names of row and single star item should be included in selector in or
 <h3>Disable Icons</h3>
 <p>Disable needed amount of icons.</p>
 <img src="https://cloud.githubusercontent.com/assets/2904795/18433953/6e0c1dc0-78fb-11e6-850e-ee80e26c6a9f.gif" alt="Disable Icons">
+
+<h3>Set Default Stars</h3>
+<p>Set desired number of default stars to have them on load.</p>
+<img src="https://cloud.githubusercontent.com/assets/2904795/18434022/b93e2568-78fb-11e6-9c54-ff42bdb6f36e.gif" alt="Set Default Stars">
 </section>
 

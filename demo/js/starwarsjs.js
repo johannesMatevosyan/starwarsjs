@@ -48,7 +48,7 @@
                     }
                 }
                 $(this).append("<input type='hidden' class='" + starwarsjs.input_class + "' value=''>");
-            }else if (starwarsjs.stars > 1 && starwarsjs.range == '' && starwarsjs.count > 1){
+            } else if (starwarsjs.stars > 1 && starwarsjs.range == '' && starwarsjs.count > 1){
 
                 var i = 1, step  = i;
                 for (i; i <= starwarsjs.stars; i++){
@@ -80,7 +80,7 @@
                 }
                 $(this).append("<input type='hidden' class='" + starwarsjs.input_class + "' value=''>");
 
-            }else if (starwarsjs.range && starwarsjs.range.length == 2 && starwarsjs.count > 1){
+            } else if (starwarsjs.range && starwarsjs.range.length == 2 && starwarsjs.count > 1){
 
                 var j = starwarsjs.range[0], step  = j;
                 for (j; j <= starwarsjs.range[1]; j++){
@@ -150,7 +150,7 @@
                         set_last_default = $(starwarsjs.target).find('span.checked:last').attr('data-value');
                         $(this).find("input." + starwarsjs.input_class).val(set_last_default);
 
-                    }else if (starwarsjs.disable <= 0){
+                    } else if (starwarsjs.disable <= 0){
 
                         for (var k = 0; k < default_selected; k++){
 

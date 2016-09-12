@@ -126,5 +126,13 @@ The class names of row and single star item should be included in selector in or
 <h3>Define Range</h3>
 <p>Write random number of stars for a certain row.</p>
 <img src="https://cloud.githubusercontent.com/assets/2904795/18433837/c6366ea2-78fa-11e6-8858-4fdfdd29638c.gif" alt="Define Range">
+
+<h3>Change The Increment Value</h3>
+<p>Change the increment steps value from one (default) to a random.</p>
+<img src="https://cloud.githubusercontent.com/assets/2904795/18433880/ffd3d03c-78fa-11e6-889e-a0b6455a2891.gif" alt="Change The Increment Value">
+
+<h3>Disable Icons</h3>
+<p>Disable needed amount of icons.</p>
+<img src="https://cloud.githubusercontent.com/assets/2904795/18433953/6e0c1dc0-78fb-11e6-850e-ee80e26c6a9f.gif" alt="Disable Icons">
 </section>
 

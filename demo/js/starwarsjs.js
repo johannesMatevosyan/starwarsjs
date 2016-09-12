@@ -1,5 +1,4 @@
 (function($){
-    var count = 1;
 
     $.fn.starwarsjs = function(options){
         var settings = $.extend({
@@ -24,7 +23,6 @@
             default_stars : settings.default_stars,
             on_select : settings.on_select
         };
-
         console.log(starwarsjs);
 
         append_stars(starwarsjs);

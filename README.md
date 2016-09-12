@@ -36,6 +36,6 @@ Also, one can set various range of rate numbers if needed.
 Star icons are based on fonts which gives freedom to change the size and color of a certain icon by re-writing default CSS styles. Enjoy! :)
 </p>
 <div class="gif">
-<img src="img/star-options.gif" alt="options"/>
+<img src="https://cloud.githubusercontent.com/assets/2904795/18431942/7591f7d2-78f0-11e6-85ff-dd0082b19777.gif" alt="options"/>
 </div>
 </section>

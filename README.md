@@ -138,5 +138,9 @@ The class names of row and single star item should be included in selector in or
 <h3>Set Default Stars</h3>
 <p>Set desired number of default stars to have them on load.</p>
 <img src="https://cloud.githubusercontent.com/assets/2904795/18434022/b93e2568-78fb-11e6-9c54-ff42bdb6f36e.gif" alt="Set Default Stars">
+
+<h3>Benefits Of On_Select Option</h3>
+<p>Fetch data from selected element's value or pass data to the plugin if needed.</p>
+<img src="https://cloud.githubusercontent.com/assets/2904795/18435454/5e1ef528-7904-11e6-9541-906b11b345bd.gif" alt="Benefits Of On_Select Option">
 </section>
 

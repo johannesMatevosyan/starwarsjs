@@ -1,8 +1,3 @@
-<style>
-.markdown-body img {
-	border: 2px solid red;
-}
-</style>
 # starwarsjs
 StarWarsJS is a lightweight jQuery-plugin to set stars for feedback. 
 It allows to have infinite number of rows and stars in it. 

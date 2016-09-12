@@ -30,6 +30,12 @@
         append_stars(starwarsjs);
         traverse(starwarsjs);
         presentation(starwarsjs);
+
+        if(starwarsjs.on_select && typeof starwarsjs.on_select === "function"){
+
+            starwarsjs.on_select();
+        }
+
         return this;
     };
 
@@ -107,6 +113,8 @@
 
         if(starwarsjs.stars) {
 
+            var star_id;
+
             $(starwarsjs.target + ' .' + starwarsjs.star).each(function (key, value) {
 
                 $(this).hover( // change star's color after mouse hover
@@ -119,16 +127,10 @@
                 );
 
                 $(this).on('click', function () { // get rate after click
-                    var star_id = $(this).attr('data-value');
+                    star_id = $(this).attr('data-value');
                     $(this).siblings("input." + starwarsjs.input_class).val(star_id);
                     $(this).prevAll().andSelf().addClass('checked');
                     $(this).nextAll().removeClass('checked');
-
-                    if(starwarsjs.on_select && typeof starwarsjs.on_select === "function"){
-
-                        console.log("onselect called");
-                        starwarsjs.on_select();
-                    }
 
                 });
 
@@ -180,7 +182,10 @@
 
             });
 
+            return
         }
+
+
     }
 
     // display options in demo

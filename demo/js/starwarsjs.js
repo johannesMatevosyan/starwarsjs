@@ -29,11 +29,6 @@
         traverse(starwarsjs);
         presentation(starwarsjs);
 
-        if(starwarsjs.on_select && typeof starwarsjs.on_select === "function"){
-
-            starwarsjs.on_select();
-        }
-
         return this;
     };
 
@@ -130,6 +125,10 @@
                     $(this).prevAll().andSelf().addClass('checked');
                     $(this).nextAll().removeClass('checked');
 
+                    if(starwarsjs.on_select && typeof starwarsjs.on_select === "function"){
+
+                        starwarsjs.on_select();
+                    }
                 });
 
             });

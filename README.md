@@ -78,4 +78,15 @@ The class names of row and single star item should be included in selector in or
     $(' .rate_row ').starwarsjs();   
     
 ```
+
+<h3>Options</h3>
+```js
+	$(' .rate_row ').centipedejs({
+		stars :  5,
+		range :  [2, 6],
+		count :  2,
+		disable :  4,
+	});
+```
+
 </section>

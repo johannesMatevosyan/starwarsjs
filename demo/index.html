@@ -88,46 +88,19 @@
                             </code>
                         </pre>
                     </li>
-                    <li>Write your HTML:</li>
+                    <li>Write your HTML and define your class where you want to wrap stars:</li>
                     <li>
                         <pre class="sw_code">
                             <code>
                                 <div>
-                                    <span><</span>div <span class="cnt_attr">class</span>=<span class="cnt_string">"rate_row"</span><span>> </span>
 
-                                    <span class="cnt_comments"><span><</span>!-- Wrap stars in a row --<span>> </span></span>
-                                    <div class="cnt_html">
-                                        <span><</span>span <span class="cnt_attr">class</span>=<span class="cnt_string">"rate_star"</span> <span class="cnt_attr">data-value</span>=<span class="cnt_string">"1"</span><span>></span><span><</span>/span></span>
-                                        <span class="cnt_comments"><span><</span>!-- Single Star --<span>> </span></span>
-                                    </div>
-                                    <div class="cnt_html">
-                                        <span><</span>span <span class="cnt_attr">class</span>=<span class="cnt_string">"rate_star"</span> <span class="cnt_attr">data-value</span>=<span class="cnt_string">"2"</span><span>></span><span><</span>/span></span>
-                                    </div>
-                                    <div class="cnt_html">
-                                        <span><</span>span <span class="cnt_attr">class</span>=<span class="cnt_string">"rate_star"</span> <span class="cnt_attr">data-value</span>=<span class="cnt_string">"3"</span><span>></span><span><</span>/span></span>
-                                    </div>
-                                    <div class="cnt_html">
-                                        <span><</span>span <span class="cnt_attr">class</span>=<span class="cnt_string">"rate_star"</span> <span class="cnt_attr">data-value</span>=<span class="cnt_string">"4"</span><span>></span><span><</span>/span></span>
-                                    </div>
-                                    <div class="cnt_html">
-                                        <span><</span>span <span class="cnt_attr">class</span>=<span class="cnt_string">"rate_star"</span> <span class="cnt_attr">data-value</span>=<span class="cnt_string">"5"</span><span>></span><span><</span>/span></span>
-                                    </div>
-                                    <div class="cnt_html">
-                                        <span><</span>input <span class="cnt_attr">type</span>=<span class="cnt_string">"hidden"</span> <span class="cnt_attr">class</span>=<span class="cnt_string">"get_star"</span> <span class="cnt_attr">value</span>=<span class="cnt_string">""</span><span>> </span>
-                                    </div>
-
-                                    <span><</span>/div> <br>
+                                    <span><</span>div <span class="cnt_attr">class</span>=<span class="cnt_string">"rate_row"</span><span>></span><span><</span>/div>
+                                    <span class="cnt_comments"><span><</span>!-- Single Row --<span>> </span></span>
                                 </div>
 
                             </code>
                         </pre>
                     </li>
-                    <li><p> Input element takes rate values from <span class="cnt_attr">data-value</span> attributes after
-                        a certain star was clicked.
-                        Therefore you should specify desired rate range there. The code written above will provide
-                        rate from 1 to 5, according to values written in data-value attributes.</p>
-                    </li>
-
                 </ul>
             </div>
         </section>
@@ -143,6 +116,43 @@
                     <code>$(<span class="cnt_string">' .rate_row '</span>).starwarsjs();</code>
                  </pre>
             </div>
+            <div>
+                <p>StarWarJS will generate following html code after initialization.</p>
+                 <pre class="sw_code">
+                    <code>
+                        <div>
+                            <span class="cnt_comments"><span><</span>!-- Wrap stars in a row --<span>> </span></span><br>
+                            <span><</span>div <span class="cnt_attr">class</span>=<span class="cnt_string">"rate_row"</span><span>> </span>
+
+                            <div class="cnt_html">
+                                <span><</span>span <span class="cnt_attr">class</span>=<span class="cnt_string">"rate_star"</span> <span class="cnt_attr">data-value</span>=<span class="cnt_string">"1"</span><span>></span><span><</span>/span></span>
+                                <span class="cnt_comments"><span><</span>!-- Single Star --<span>> </span></span>
+                            </div>
+                            <div class="cnt_html">
+                                <span><</span>span <span class="cnt_attr">class</span>=<span class="cnt_string">"rate_star"</span> <span class="cnt_attr">data-value</span>=<span class="cnt_string">"2"</span><span>></span><span><</span>/span></span>
+                            </div>
+                            <div class="cnt_html">
+                                <span><</span>span <span class="cnt_attr">class</span>=<span class="cnt_string">"rate_star"</span> <span class="cnt_attr">data-value</span>=<span class="cnt_string">"3"</span><span>></span><span><</span>/span></span>
+                            </div>
+                            <div class="cnt_html">
+                                <span><</span>span <span class="cnt_attr">class</span>=<span class="cnt_string">"rate_star"</span> <span class="cnt_attr">data-value</span>=<span class="cnt_string">"4"</span><span>></span><span><</span>/span></span>
+                            </div>
+                            <div class="cnt_html">
+                                <span><</span>span <span class="cnt_attr">class</span>=<span class="cnt_string">"rate_star"</span> <span class="cnt_attr">data-value</span>=<span class="cnt_string">"5"</span><span>></span><span><</span>/span></span>
+                            </div>
+                            <div class="cnt_html">
+                                <span><</span>input <span class="cnt_attr">type</span>=<span class="cnt_string">"hidden"</span> <span class="cnt_attr">class</span>=<span class="cnt_string">"get_star"</span> <span class="cnt_attr">value</span>=<span class="cnt_string">""</span><span>> </span>
+                            </div>
+
+                            <span><</span>/div> <br>
+                        </div>
+
+                    </code>
+                </pre>
+                <p> The values inside <span class="selected">data-value</span> attributes are defined according to the
+                    number of stars provided in options. Input element takes rate values from <span class="selected">data-value</span> attributes after
+                    a certain star was clicked.</p>
+            </div>
         </section>
         <section class="options">
             <h3>Options</h3>
@@ -156,8 +166,9 @@
                                 <li><span class="options_js_keys">range&nbsp;:  </span><span class="options_js_val">&nbsp;[2, 6]</span>, </li>
                                 <li><span class="options_js_keys">count&nbsp;:  </span><span class="options_js_val">&nbsp;2</span>, </li>
                                 <li><span class="options_js_keys">disable&nbsp;:  </span><span class="options_js_val">&nbsp;4</span>, </li>
-                                <li><span class="options_js_keys">default_stars&nbsp;:  </span><span class="options_js_val">&nbsp;0</span>, </li>
-                                <li><span class="options_js_keys">on_select&nbsp;:  </span><span class="options_js_val">&nbsp;null</span>, </li>
+                                <li><span class="options_js_keys">default_stars&nbsp;:  </span><span class="options_js_val">&nbsp;2</span>, </li>
+                                <li><span class="options_js_keys">on_select&nbsp;:  </span>
+                                    <span class="options_js_val">&nbsp;function(data){ console.log("write something..."); }</span> </li>
                             </ul>
                         </div>
                         });

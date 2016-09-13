@@ -26,7 +26,6 @@
 
         append_stars(starwarsjs);
         traverse(starwarsjs);
-        presentation(starwarsjs);
 
         return this;
     };
@@ -165,7 +164,7 @@
                 if (starwarsjs.stars <= starwarsjs.default_stars){
                     console.warn('The number of stars in a row should be bigger than the number of default stars');
                 }
-                if (starwarsjs.default_stars < 0){
+                if (starwarsjs.default_stars < 1){
                     console.warn('The number of default stars should be bigger than 0');
                 }
                 if (starwarsjs.key >= starwarsjs.default_stars){

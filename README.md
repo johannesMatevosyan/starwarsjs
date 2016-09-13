@@ -56,7 +56,7 @@ Write your HTML:
 Input element takes rate values from data-value attributes after a certain star was clicked. Therefore you should specify desired rate range there. The code written above will provide rate from 1 to 5, according to values written in data-value attributes.
 
 <h3>Initialize StarWarsJS.js</h3>
-The class names of row should be included in selector in order to initialize the plugin. All you need is to fetch values from input fields written in code. Note: Do not forget to wrap code inside $( document ).ready(). All you need is to fetch values from input fields written in code.
+The class names of row should be included in selector in order to initialize the plugin. All you need is to fetch values from input fields written in code. Note: Do not forget to wrap code inside $( document ).ready(). 
 
 ```js
     $(' .rate_row ').starwarsjs();   

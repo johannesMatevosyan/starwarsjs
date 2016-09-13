@@ -82,6 +82,7 @@ The values inside data-value attributes are defined according to the number of s
 		range :  [2, 6],
 		count :  2,
 		disable :  4,
+		on_select : function(data){ console.log("write something..."); }
 	});
 ```
 
@@ -93,32 +94,40 @@ The values inside data-value attributes are defined according to the number of s
         <td><h4>Description</h4></td>
     </tr>
     <tr>
-        <td class="key">stars:</td>
-        <td class="default">5</td>
-        <td class="value">Set the number of stars per row. </td>
+        <td>stars:</td>
+        <td>5</td>
+        <td>Set the number of stars per row. </td>
     </tr>
     <tr>
-        <td class="key">range:</td>
-        <td class="default">[]</td>
+        <td>range:</td>
+        <td>[]</td>
         <td class="value">By default the values of per star are starting from one and ending with the number of stars. By activating "range" option it is possible to define different start and end values for rate's range. The first element of array stands for the start value and the last element of array stands for the end value of range. </td>
     </tr>
     <tr>
-        <td class="key">count:</td>
-        <td class="default">1</td>
-        <td class="value">Initially the values of rate are incrementing by one. In case you want to increment rate values by another number then the choice is yours. </td>
+        <td>count:</td>
+        <td>1</td>
+        <td>Initially the values of rate are incrementing by one. In case you want to increment rate values by another number then the choice is yours. </td>
     </tr>
     <tr>
-        <td class="key">disable:</td>
-        <td class="default">0</td>
-        <td class="value">"disable" option allows to have inactive star icons which are not clickable. When a number bigger than zero is set for this option then all next values till the end of defined range are becoming disabled. 
+        <td>disable:</td>
+        <td>0</td>
+        <td>"disable" option allows to have inactive star icons which are not clickable. When a number bigger than zero is set for this option then all next values till the end of defined range are becoming disabled. 
 <b>Note*:</b> the number of disabled star icons should not exceed the stars or the value of the last element of a range array. </td>
     </tr>
-    
     <tr>
-        <td class="key">default_stars:</td>
-        <td class="default">0</td>
-        <td class="value">In case user wants to have active items by default then "default_stars" option is ready. Just set the desired number of stars here. This option will add "default-stars" attribute to the sibling inputs.
-<b>Note*:</b> the number of default stars should not overlap with the number disabled stars. In other words the number of default stars should be less than the number disabled stars. For more info check presentations below: </td>
+        <td>default_stars:</td>
+        <td>0</td>
+        <td>In case user wants to have active items by default then "default_stars" option is ready. 
+        Just set the desired number of stars here. This option will display active stars on load and add "default-stars" attribute to the sibling input which will show the number of stars loaded by default.
+        <b><i>Note:</i></b> the number of default stars should not overlap with the number of disabled stars.
+        In other words the number of default stars should be less than the number of disabled stars
+        as both options are changing items located to the next </td>
+    </tr>
+    <tr>
+	    <td>
+	    	Due to "on_select" option one can retrieve selected star's value or pass needed data to the plugin.
+	    	<i>For more info check presentations below:</i>
+	    </td>
     </tr>
 </table>
 

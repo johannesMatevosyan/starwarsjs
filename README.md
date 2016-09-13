@@ -1,14 +1,12 @@
 # starwarsjs
-StarWarsJS is a lightweight jQuery-plugin to set stars for feedback. 
-It allows to have infinite number of rows and stars in it. 
-Also, one can set various range of rate numbers if needed.
+StarWarsJS is a jQuery based plugin for settings stars for feedback. 
 
 <section class="features">
             <h3>Features</h3>
             <p>
-                StarWarsJS is a lightweight jQuery-plugin to set stars for feedback.
-                It is possible to have infinite number of rows and stars in it.
-                Also, one can set various range of rate numbers. 
+                StarWarsJS is a lightweight jQuery-plugin to set feedback stars.
+                It allows to have infinite number of rows and stars in it.
+                Also, one can set various range of rate numbers if needed. 
             </p> 
             <div>
                         <p style="text-align: center;">
@@ -53,14 +51,7 @@ First of all download and unpack zip file from github repository. Then include t
 ```
 Write your HTML:
 ``` html
-<div class="rate_row"> <!-- Wrap stars in a row -->
-	<span class="rate_star" data-value="1"></span> <!-- Single Star -->
-	<span class="rate_star" data-value="2"></span>
-	<span class="rate_star" data-value="3"></span>
-	<span class="rate_star" data-value="4"></span>
-	<span class="rate_star" data-value="5"></span>
-	<input type="hidden" class="get_star" value="">
-</div> 
+<div class="rate_row"></div>
 ```
 Input element takes rate values from data-value attributes after a certain star was clicked. Therefore you should specify desired rate range there. The code written above will provide rate from 1 to 5, according to values written in data-value attributes.
 
@@ -71,7 +62,19 @@ The class names of row and single star item should be included in selector in or
     $(' .rate_row ').starwarsjs();   
     
 ```
-
+StarWarJS will generate following html code after initialization.
+``` html
+<div class="rate_row"> <!-- Wrap stars in a row -->
+	<span class="rate_star" data-value="1"></span> <!-- Single Star -->
+	<span class="rate_star" data-value="2"></span>
+	<span class="rate_star" data-value="3"></span>
+	<span class="rate_star" data-value="4"></span>
+	<span class="rate_star" data-value="5"></span>
+	<input type="hidden" class="get_star" value="">
+</div> 
+```
+The values inside data-value attributes are defined according to the number of stars provided in options. Input element takes rate values from data-value attributes after a certain star was clicked.
+                    
 <h3>Options</h3>
 ```js
 	$(' .rate_row ').centipedejs({

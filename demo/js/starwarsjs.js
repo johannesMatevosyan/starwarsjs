@@ -180,7 +180,7 @@
                 if (starwarsjs.disable > 0 && starwarsjs.default_stars > 0 && starwarsjs.default_stars >= starwarsjs.disable){
                     console.warn('The number of disabled stars should not overlap with the number of default stars.');
                 }
-                if (starwarsjs.disable > 0 && starwarsjs.disable >= starwarsjs.range[1]){
+                if (starwarsjs.disable > 0 && starwarsjs.disable >= starwarsjs.range[1]-starwarsjs.range[0]){
                     console.warn('The number of disabled stars should be less than the last number defined in range.');
                 }
 

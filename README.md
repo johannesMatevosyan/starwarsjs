@@ -154,7 +154,7 @@ The values inside data-value attributes are defined according to the number of s
 <img src="https://cloud.githubusercontent.com/assets/2904795/18434022/b93e2568-78fb-11e6-9c54-ff42bdb6f36e.gif" alt="Set Default Stars">
 
 <h3>Benefits Of On_Select Option</h3>
-<p>Fetch selected element's value or pass data to plugin if needed.</p>
+<p>Fetch selected element's value or pass random data to plugin.</p>
 <img src="https://cloud.githubusercontent.com/assets/2904795/18435454/5e1ef528-7904-11e6-9541-906b11b345bd.gif" alt="Benefits Of On_Select Option">
 </section>
 

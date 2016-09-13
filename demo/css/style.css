@@ -59,9 +59,15 @@ body{
     border-bottom: 1px solid;
     padding: 40px 20px 20px 20px;
 }
+.wrapper h2{
+    font-size: 24px;
+    font-family: 'open_sansregular';
+    text-align: center;
+    margin-bottom: 20px;
+}
 .wrap_form{
     text-align: center;
-    height: 180px;
+    height: 120px;
 }
 .wrap_desc{
     text-align: center;
@@ -230,7 +236,7 @@ pre.sw_code code .options_js_val{
 .rate_row{
     margin: 2px auto; /* custom */
     text-align: left; /* custom */
-    width: 180px; /* custom */
+    width: 135px; /* custom */
 }
 .rate_star{
     color: #cccccc;

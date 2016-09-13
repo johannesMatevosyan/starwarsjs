@@ -8,6 +8,7 @@
 <body>
     <h1 class="head"><span>Hovhannes Matevosyan</span></h1>
     <div class="wrapper">
+        <h2>StarWarsJS</h2>
         <div class="wrap_form">
             <div class="rate_row"></div>
             <div class="rate_row"></div>
@@ -31,7 +32,7 @@
         <section class="features">
             <h3>Features</h3>
             <p>
-                StarWarsJS is a lightweight jQuery-plugin to set stars for feedback.
+                StarWarsJS is a lightweight jQuery-plugin to set feedback stars.
                 It allows to have infinite number of rows and stars in it.
                 Also, one can set various range of rate numbers if needed.
             </p>
@@ -133,9 +134,9 @@
         <section>
             <h3>Initialize StarWarsJS.js</h3>
             <p>
-                The class names of row and single star item should be included in selector in order to initialize the plugin.
-                <i>Note:</i> Do not forget to wrap code inside <span class="selected">$( document ).ready()</span>.
-                All you need is to fetch values from input fields written in code.
+                The class names of row should be included in selector in order to initialize the plugin.
+                All you need is to fetch values from input fields written in code. <br>
+                <strong><i>Note:</i></strong> Do not forget to wrap code inside <span class="selected">$( document ).ready()</span>.
             </p>
             <div>
                  <pre class="sw_code">
@@ -146,6 +147,7 @@
         <section class="options">
             <h3>Options</h3>
             <div class="section_content">
+                <p>Below is a list of available options.</p>
                 <pre class="sw_code">
                     <code>$(<span class="cnt_string">' .rate_row '</span>).centipedejs({
                         <div class="options_js">
@@ -154,6 +156,8 @@
                                 <li><span class="options_js_keys">range&nbsp;:  </span><span class="options_js_val">&nbsp;[2, 6]</span>, </li>
                                 <li><span class="options_js_keys">count&nbsp;:  </span><span class="options_js_val">&nbsp;2</span>, </li>
                                 <li><span class="options_js_keys">disable&nbsp;:  </span><span class="options_js_val">&nbsp;4</span>, </li>
+                                <li><span class="options_js_keys">default_stars&nbsp;:  </span><span class="options_js_val">&nbsp;0</span>, </li>
+                                <li><span class="options_js_keys">on_select&nbsp;:  </span><span class="options_js_val">&nbsp;null</span>, </li>
                             </ul>
                         </div>
                         });
@@ -169,7 +173,7 @@
                     </tr>
                     <tr>
                         <td class="key">stars:</td>
-                        <td class="default">5</td>
+                        <td class="default">1</td>
                         <td class="value">Set the number of stars per row.</td>
                     </tr>
                     <tr>
@@ -192,19 +196,19 @@
                         <td class="value"><span class="selected">disable</span> option allows to have inactive star icons which are not clickable.
                             When a number bigger than zero is set for this option then all next values till the end of
                             defined range are becoming disabled. <br>
-                        <strong><i>Note:</i></strong> the number of disabled star icons should not exceed the <span class="selected">stars</span>
-                        or the value of the last element of a <span class="selected">range</span> array.
-
+                        <strong><i>Note:</i></strong> the number of disabled star icons should not exceed
+                            the value of the last element of a <span class="selected">range</span> array.
                         </td>
                     </tr>
                     <tr>
                         <td class="key">default_stars</td>
                         <td class="default">0</td>
                         <td class="value">In case user wants to have active items by default then <span class="selected">default_stars</span>
-                            option is ready. Just set the desired number of stars here. This option will add
-                            <span class="selected">"default-stars"</span> attribute to the sibling inputs.<br>
-                            <strong><i>Note:</i></strong> the number of default stars should not overlap with the number disabled
-                            stars. In other words the number of default stars should be less than the number disabled stars.
+                            option is ready. Just set the desired number of stars here. This option will display active stars on load and add
+                            <span class="selected">"default-stars"</span> attribute to the sibling input which will show the number of stars loaded by default.<br>
+                            <strong><i>Note:</i></strong> the number of default stars should not overlap with the number of disabled stars.
+                            In other words the number of default stars should be less than the number of disabled stars
+                            as both options are changing items located to the next.
                         </td>
                     </tr>
                     <tr>
@@ -212,7 +216,7 @@
                         <td class="default">null</td>
                         <td class="value">
                             Due to <span class="selected">on_select</span> option one can retrieve selected star's value
-                            or pass needed data to the <span class="selected">StarWarsJS</span> plugin.
+                            or pass needed data to the plugin.
                             <i>For more info check presentations below:</i>
                         </td>
                     </tr>
@@ -252,7 +256,7 @@
             </div>
 
             <h3>Benefits of On_Select option</h3>
-            <p>Fetch selected element's value or pass data to plugin if needed. </p>
+            <p>Fetch selected element's value or pass random data to plugin. </p>
             <div class="gif">
                 <img src="img/on-select.gif" class="b_border" alt="Benefits of on_select option">
             </div>
@@ -263,17 +267,13 @@
     <script>
 
         $( document ).ready(function() {
-            var world = "World";
             $('.rate_row').starwarsjs({
                 stars : 5,
                 count : 1,
-                on_select : function(data){ // pass needed data to plugin
-                    console.log("Hello " + world + data);
-                }
             });
 
         });
-        
+
     </script>
 </body>
 </html>

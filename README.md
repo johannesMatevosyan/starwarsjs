@@ -124,6 +124,8 @@ The values inside data-value attributes are defined according to the number of s
         as both options are changing items located to the next </td>
     </tr>
     <tr>
+    		<td>on_select:</td>
+        	<td>null</td>
 	    <td>
 	    	Due to "on_select" option one can retrieve selected star's value or pass needed data to the plugin.
 	    	<i>For more info check presentations below:</i>

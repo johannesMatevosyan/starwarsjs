@@ -20,6 +20,7 @@
             disable: settings.disable,
             checked_class : "checked",
             disable_class : "disable",
+            active_element : null,
             input_class : "get_rate",
             default_stars : settings.default_stars,
             on_select : settings.on_select
@@ -128,7 +129,7 @@
                     $(this).siblings("input." + starwarsjs.input_class).val(star_id);
                     $(this).prevAll().andSelf().addClass(starwarsjs.checked_class);
                     $(this).nextAll().removeClass(starwarsjs.checked_class);
-
+                    starwarsjs.active_element = this.parentElement;
                     if (starwarsjs.on_select && typeof starwarsjs.on_select === "function"){
 
                         starwarsjs.on_select(star_id);

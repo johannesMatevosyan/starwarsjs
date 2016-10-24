@@ -129,7 +129,7 @@
                     $(this).siblings("input." + starwarsjs.input_class).val(star_id);
                     $(this).prevAll().andSelf().addClass(starwarsjs.checked_class);
                     $(this).nextAll().removeClass(starwarsjs.checked_class);
-                    starwarsjs.active_element = this.parentElement;
+                    starwarsjs.active_element = $(this).parent();
                     if (starwarsjs.on_select && typeof starwarsjs.on_select === "function"){
 
                         starwarsjs.on_select(star_id);

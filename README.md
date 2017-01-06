@@ -47,6 +47,10 @@ First of all download and unpack zip file from github repository. Then include t
 ```js
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>    
+```
+Then include JS code just after jquery.
+```js 
+
     <script src="path/to/starwars.js"></script> 
 ```
 Write your HTML:
